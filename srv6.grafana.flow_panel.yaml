@@ -1,0 +1,568 @@
+---
+anchors:
+  thresholds-operstate: &thresholds-operstate
+  - color: red
+    level: 0
+  - color: green
+    level: 1
+  thresholds-traffic: &thresholds-traffic
+  - color: gray
+    level: 0
+  - color: green
+    level: 199999
+  - color: yellow
+    level: 500000
+  - color: orange
+    level: 1000000
+  - color: red
+    level: 5000000
+  label-config: &label-config
+    separator: replace
+    units: bps
+    decimalPoints: 1
+    valueMappings:
+    - valueMax: 199999
+      text: ​
+    - valueMin: 200000
+cellIdPreamble: cell-
+cells:
+  clab-telstra_tid2-CORE1:eth1:clab-telstra_tid2-CORE2:eth1:
+    dataRef: oper-state:clab-telstra_tid2-CORE1:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE1:eth1:clab-telstra_tid2-CORE2:eth1:
+    dataRef: clab-telstra_tid2-CORE1:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE1:eth2:clab-telstra_tid2-CORE3:eth1:
+    dataRef: oper-state:clab-telstra_tid2-CORE1:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE1:eth2:clab-telstra_tid2-CORE3:eth1:
+    dataRef: clab-telstra_tid2-CORE1:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE1:eth3:clab-telstra_tid2-CORE5:eth4:
+    dataRef: oper-state:clab-telstra_tid2-CORE1:eth3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE1:eth3:clab-telstra_tid2-CORE5:eth4:
+    dataRef: clab-telstra_tid2-CORE1:eth3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE1:eth4:clab-telstra_tid2-SRv6-GW1:eth1:
+    dataRef: oper-state:clab-telstra_tid2-CORE1:eth4
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE1:eth4:clab-telstra_tid2-SRv6-GW1:eth1:
+    dataRef: clab-telstra_tid2-CORE1:eth4:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE1:eth5:clab-telstra_tid2-SRv6-GW2:eth1:
+    dataRef: oper-state:clab-telstra_tid2-CORE1:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE1:eth5:clab-telstra_tid2-SRv6-GW2:eth1:
+    dataRef: clab-telstra_tid2-CORE1:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE2:eth1:clab-telstra_tid2-CORE1:eth1:
+    dataRef: oper-state:clab-telstra_tid2-CORE2:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE2:eth1:clab-telstra_tid2-CORE1:eth1:
+    dataRef: clab-telstra_tid2-CORE2:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE2:eth2:clab-telstra_tid2-CORE3:eth2:
+    dataRef: oper-state:clab-telstra_tid2-CORE2:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE2:eth2:clab-telstra_tid2-CORE3:eth2:
+    dataRef: clab-telstra_tid2-CORE2:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE2:eth3:clab-telstra_tid2-CORE6:eth4:
+    dataRef: oper-state:clab-telstra_tid2-CORE2:eth3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE2:eth3:clab-telstra_tid2-CORE6:eth4:
+    dataRef: clab-telstra_tid2-CORE2:eth3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE2:eth4:clab-telstra_tid2-SRv6-GW1:eth2:
+    dataRef: oper-state:clab-telstra_tid2-CORE2:eth4
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE2:eth4:clab-telstra_tid2-SRv6-GW1:eth2:
+    dataRef: clab-telstra_tid2-CORE2:eth4:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE2:eth5:clab-telstra_tid2-SRv6-GW2:eth2:
+    dataRef: oper-state:clab-telstra_tid2-CORE2:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE2:eth5:clab-telstra_tid2-SRv6-GW2:eth2:
+    dataRef: clab-telstra_tid2-CORE2:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE3:eth1:clab-telstra_tid2-CORE1:eth2:
+    dataRef: oper-state:clab-telstra_tid2-CORE3:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE3:eth1:clab-telstra_tid2-CORE1:eth2:
+    dataRef: clab-telstra_tid2-CORE3:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE3:eth2:clab-telstra_tid2-CORE2:eth2:
+    dataRef: oper-state:clab-telstra_tid2-CORE3:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE3:eth2:clab-telstra_tid2-CORE2:eth2:
+    dataRef: clab-telstra_tid2-CORE3:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE3:eth5:clab-telstra_tid2-CORE5:eth3:
+    dataRef: oper-state:clab-telstra_tid2-CORE3:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE3:eth5:clab-telstra_tid2-CORE5:eth3:
+    dataRef: clab-telstra_tid2-CORE3:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE3:eth6:clab-telstra_tid2-CORE6:eth3:
+    dataRef: oper-state:clab-telstra_tid2-CORE3:eth6
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE3:eth6:clab-telstra_tid2-CORE6:eth3:
+    dataRef: clab-telstra_tid2-CORE3:eth6:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE5:eth4:clab-telstra_tid2-CORE1:eth3:
+    dataRef: oper-state:clab-telstra_tid2-CORE5:eth4
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE5:eth4:clab-telstra_tid2-CORE1:eth3:
+    dataRef: clab-telstra_tid2-CORE5:eth4:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE5:eth1:clab-telstra_tid2-SRv6-PE1:eth1:
+    dataRef: oper-state:clab-telstra_tid2-CORE5:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE5:eth1:clab-telstra_tid2-SRv6-PE1:eth1:
+    dataRef: clab-telstra_tid2-CORE5:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE5:eth2:clab-telstra_tid2-MPLS-PE1:eth1:
+    dataRef: oper-state:clab-telstra_tid2-CORE5:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE5:eth2:clab-telstra_tid2-MPLS-PE1:eth1:
+    dataRef: clab-telstra_tid2-CORE5:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE5:eth3:clab-telstra_tid2-CORE3:eth5:
+    dataRef: oper-state:clab-telstra_tid2-CORE5:eth3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE5:eth3:clab-telstra_tid2-CORE3:eth5:
+    dataRef: clab-telstra_tid2-CORE5:eth3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE5:eth5:clab-telstra_tid2-CORE6:eth5:
+    dataRef: oper-state:clab-telstra_tid2-CORE5:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE5:eth5:clab-telstra_tid2-CORE6:eth5:
+    dataRef: clab-telstra_tid2-CORE5:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE6:eth4:clab-telstra_tid2-CORE2:eth3:
+    dataRef: oper-state:clab-telstra_tid2-CORE6:eth4
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE6:eth4:clab-telstra_tid2-CORE2:eth3:
+    dataRef: clab-telstra_tid2-CORE6:eth4:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE6:eth5:clab-telstra_tid2-CORE5:eth5:
+    dataRef: oper-state:clab-telstra_tid2-CORE6:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE6:eth5:clab-telstra_tid2-CORE5:eth5:
+    dataRef: clab-telstra_tid2-CORE6:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE6:eth1:clab-telstra_tid2-SRv6-PE2:eth1:
+    dataRef: oper-state:clab-telstra_tid2-CORE6:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE6:eth1:clab-telstra_tid2-SRv6-PE2:eth1:
+    dataRef: clab-telstra_tid2-CORE6:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE6:eth2:clab-telstra_tid2-MPLS-PE2:eth1:
+    dataRef: oper-state:clab-telstra_tid2-CORE6:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE6:eth2:clab-telstra_tid2-MPLS-PE2:eth1:
+    dataRef: clab-telstra_tid2-CORE6:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CORE6:eth3:clab-telstra_tid2-CORE3:eth6:
+    dataRef: oper-state:clab-telstra_tid2-CORE6:eth3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CORE6:eth3:clab-telstra_tid2-CORE3:eth6:
+    dataRef: clab-telstra_tid2-CORE6:eth3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-SRv6-PE1:eth1:clab-telstra_tid2-CORE5:eth1:
+    dataRef: oper-state:clab-telstra_tid2-SRv6-PE1:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-SRv6-PE1:eth1:clab-telstra_tid2-CORE5:eth1:
+    dataRef: clab-telstra_tid2-SRv6-PE1:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-SRv6-PE1:eth2:clab-telstra_tid2-SRv6-PE2:eth2:
+    dataRef: oper-state:clab-telstra_tid2-SRv6-PE1:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-SRv6-PE1:eth2:clab-telstra_tid2-SRv6-PE2:eth2:
+    dataRef: clab-telstra_tid2-SRv6-PE1:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-SRv6-PE1:eth3:clab-telstra_tid2-CE1:eth1:
+    dataRef: oper-state:clab-telstra_tid2-SRv6-PE1:eth3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-SRv6-PE1:eth3:clab-telstra_tid2-CE1:eth1:
+    dataRef: clab-telstra_tid2-SRv6-PE1:eth3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-SRv6-PE2:eth1:clab-telstra_tid2-CORE6:eth1:
+    dataRef: oper-state:clab-telstra_tid2-SRv6-PE2:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-SRv6-PE2:eth1:clab-telstra_tid2-CORE6:eth1:
+    dataRef: clab-telstra_tid2-SRv6-PE2:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-SRv6-PE2:eth2:clab-telstra_tid2-SRv6-PE1:eth2:
+    dataRef: oper-state:clab-telstra_tid2-SRv6-PE2:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-SRv6-PE2:eth2:clab-telstra_tid2-SRv6-PE1:eth2:
+    dataRef: clab-telstra_tid2-SRv6-PE2:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-SRv6-PE2:eth3:clab-telstra_tid2-CE1:eth2:
+    dataRef: oper-state:clab-telstra_tid2-SRv6-PE2:eth3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-SRv6-PE2:eth3:clab-telstra_tid2-CE1:eth2:
+    dataRef: clab-telstra_tid2-SRv6-PE2:eth3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-SRv6-GW1:eth1:clab-telstra_tid2-CORE1:eth4:
+    dataRef: oper-state:clab-telstra_tid2-SRv6-GW1:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-SRv6-GW1:eth1:clab-telstra_tid2-CORE1:eth4:
+    dataRef: clab-telstra_tid2-SRv6-GW1:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-SRv6-GW1:eth2:clab-telstra_tid2-CORE2:eth4:
+    dataRef: oper-state:clab-telstra_tid2-SRv6-GW1:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-SRv6-GW1:eth2:clab-telstra_tid2-CORE2:eth4:
+    dataRef: clab-telstra_tid2-SRv6-GW1:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-SRv6-GW1:eth4:clab-telstra_tid2-CE3:eth1:
+    dataRef: oper-state:clab-telstra_tid2-SRv6-GW1:eth4
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-SRv6-GW1:eth4:clab-telstra_tid2-CE3:eth1:
+    dataRef: clab-telstra_tid2-SRv6-GW1:eth4:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-SRv6-GW1:eth5:clab-telstra_tid2-CE4:eth1:
+    dataRef: oper-state:clab-telstra_tid2-SRv6-GW1:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-SRv6-GW1:eth5:clab-telstra_tid2-CE4:eth1:
+    dataRef: clab-telstra_tid2-SRv6-GW1:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-SRv6-GW2:eth1:clab-telstra_tid2-CORE1:eth5:
+    dataRef: oper-state:clab-telstra_tid2-SRv6-GW2:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-SRv6-GW2:eth1:clab-telstra_tid2-CORE1:eth5:
+    dataRef: clab-telstra_tid2-SRv6-GW2:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-SRv6-GW2:eth2:clab-telstra_tid2-CORE2:eth5:
+    dataRef: oper-state:clab-telstra_tid2-SRv6-GW2:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-SRv6-GW2:eth2:clab-telstra_tid2-CORE2:eth5:
+    dataRef: clab-telstra_tid2-SRv6-GW2:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-SRv6-GW2:eth4:clab-telstra_tid2-CE3:eth2:
+    dataRef: oper-state:clab-telstra_tid2-SRv6-GW2:eth4
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-SRv6-GW2:eth4:clab-telstra_tid2-CE3:eth2:
+    dataRef: clab-telstra_tid2-SRv6-GW2:eth4:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-SRv6-GW2:eth5:clab-telstra_tid2-CE4:eth2:
+    dataRef: oper-state:clab-telstra_tid2-SRv6-GW2:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-SRv6-GW2:eth5:clab-telstra_tid2-CE4:eth2:
+    dataRef: clab-telstra_tid2-SRv6-GW2:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-MPLS-PE1:eth1:clab-telstra_tid2-CORE5:eth2:
+    dataRef: oper-state:clab-telstra_tid2-MPLS-PE1:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-MPLS-PE1:eth1:clab-telstra_tid2-CORE5:eth2:
+    dataRef: clab-telstra_tid2-MPLS-PE1:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-MPLS-PE1:eth2:clab-telstra_tid2-MPLS-PE2:eth2:
+    dataRef: oper-state:clab-telstra_tid2-MPLS-PE1:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-MPLS-PE1:eth2:clab-telstra_tid2-MPLS-PE2:eth2:
+    dataRef: clab-telstra_tid2-MPLS-PE1:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-MPLS-PE1:eth3:clab-telstra_tid2-CE2:eth1:
+    dataRef: oper-state:clab-telstra_tid2-MPLS-PE1:eth3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-MPLS-PE1:eth3:clab-telstra_tid2-CE2:eth1:
+    dataRef: clab-telstra_tid2-MPLS-PE1:eth3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-MPLS-PE2:eth1:clab-telstra_tid2-CORE6:eth2:
+    dataRef: oper-state:clab-telstra_tid2-MPLS-PE2:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-MPLS-PE2:eth1:clab-telstra_tid2-CORE6:eth2:
+    dataRef: clab-telstra_tid2-MPLS-PE2:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-MPLS-PE2:eth2:clab-telstra_tid2-MPLS-PE1:eth2:
+    dataRef: oper-state:clab-telstra_tid2-MPLS-PE2:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-MPLS-PE2:eth2:clab-telstra_tid2-MPLS-PE1:eth2:
+    dataRef: clab-telstra_tid2-MPLS-PE2:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-MPLS-PE2:eth3:clab-telstra_tid2-CE2:eth2:
+    dataRef: oper-state:clab-telstra_tid2-MPLS-PE2:eth3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-MPLS-PE2:eth3:clab-telstra_tid2-CE2:eth2:
+    dataRef: clab-telstra_tid2-MPLS-PE2:eth3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CE1:eth1:clab-telstra_tid2-SRv6-PE1:eth3:
+    dataRef: oper-state:clab-telstra_tid2-CE1:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CE1:eth1:clab-telstra_tid2-SRv6-PE1:eth3:
+    dataRef: clab-telstra_tid2-CE1:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CE1:eth2:clab-telstra_tid2-SRv6-PE2:eth3:
+    dataRef: oper-state:clab-telstra_tid2-CE1:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CE1:eth2:clab-telstra_tid2-SRv6-PE2:eth3:
+    dataRef: clab-telstra_tid2-CE1:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CE1:eth5:clab-telstra_tid2-client-1:eth1:
+    dataRef: oper-state:clab-telstra_tid2-CE1:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CE1:eth5:clab-telstra_tid2-client-1:eth1:
+    dataRef: clab-telstra_tid2-CE1:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CE2:eth1:clab-telstra_tid2-MPLS-PE1:eth3:
+    dataRef: oper-state:clab-telstra_tid2-CE2:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CE2:eth1:clab-telstra_tid2-MPLS-PE1:eth3:
+    dataRef: clab-telstra_tid2-CE2:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CE2:eth2:clab-telstra_tid2-MPLS-PE2:eth3:
+    dataRef: oper-state:clab-telstra_tid2-CE2:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CE2:eth2:clab-telstra_tid2-MPLS-PE2:eth3:
+    dataRef: clab-telstra_tid2-CE2:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CE2:eth5:clab-telstra_tid2-client-2:eth1:
+    dataRef: oper-state:clab-telstra_tid2-CE2:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CE2:eth5:clab-telstra_tid2-client-2:eth1:
+    dataRef: clab-telstra_tid2-CE2:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CE3:eth1:clab-telstra_tid2-SRv6-GW1:eth4:
+    dataRef: oper-state:clab-telstra_tid2-CE3:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CE3:eth1:clab-telstra_tid2-SRv6-GW1:eth4:
+    dataRef: clab-telstra_tid2-CE3:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CE3:eth2:clab-telstra_tid2-SRv6-GW2:eth4:
+    dataRef: oper-state:clab-telstra_tid2-CE3:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CE3:eth2:clab-telstra_tid2-SRv6-GW2:eth4:
+    dataRef: clab-telstra_tid2-CE3:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CE3:eth5:clab-telstra_tid2-client-3:eth1:
+    dataRef: oper-state:clab-telstra_tid2-CE3:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CE3:eth5:clab-telstra_tid2-client-3:eth1:
+    dataRef: clab-telstra_tid2-CE3:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CE4:eth1:clab-telstra_tid2-SRv6-GW1:eth5:
+    dataRef: oper-state:clab-telstra_tid2-CE4:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CE4:eth1:clab-telstra_tid2-SRv6-GW1:eth5:
+    dataRef: clab-telstra_tid2-CE4:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CE4:eth2:clab-telstra_tid2-SRv6-GW2:eth5:
+    dataRef: oper-state:clab-telstra_tid2-CE4:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CE4:eth2:clab-telstra_tid2-SRv6-GW2:eth5:
+    dataRef: clab-telstra_tid2-CE4:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-CE4:eth5:clab-telstra_tid2-client-4:eth1:
+    dataRef: oper-state:clab-telstra_tid2-CE4:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-CE4:eth5:clab-telstra_tid2-client-4:eth1:
+    dataRef: clab-telstra_tid2-CE4:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-client-1:eth1:clab-telstra_tid2-CE1:eth5:
+    dataRef: oper-state:clab-telstra_tid2-client-1:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-client-1:eth1:clab-telstra_tid2-CE1:eth5:
+    dataRef: clab-telstra_tid2-client-1:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-client-2:eth1:clab-telstra_tid2-CE2:eth5:
+    dataRef: oper-state:clab-telstra_tid2-client-2:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-client-2:eth1:clab-telstra_tid2-CE2:eth5:
+    dataRef: clab-telstra_tid2-client-2:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-client-3:eth1:clab-telstra_tid2-CE3:eth5:
+    dataRef: oper-state:clab-telstra_tid2-client-3:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-client-3:eth1:clab-telstra_tid2-CE3:eth5:
+    dataRef: clab-telstra_tid2-client-3:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-telstra_tid2-client-4:eth1:clab-telstra_tid2-CE4:eth5:
+    dataRef: oper-state:clab-telstra_tid2-client-4:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-telstra_tid2-client-4:eth1:clab-telstra_tid2-CE4:eth5:
+    dataRef: clab-telstra_tid2-client-4:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
