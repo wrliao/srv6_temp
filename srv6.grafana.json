@@ -57,6 +57,7 @@
           },
           "editorMode": "code",
           "expr": "interface_oper_state",
+          "hide": false,
           "instant": false,
           "legendFormat": "oper-state:{{source}}:{{interface_name}}",
           "range": true,
