@@ -35,7 +35,7 @@ cells:
     label: *label-config
     strokeColor:
       thresholds: *thresholds-traffic
-    clab-telstra-tid2-core2:eth1:clab-telstra-tid2-core1:eth1:
+  clab-telstra-tid2-core2:eth1:clab-telstra-tid2-core1:eth1:
     dataRef: oper-state:clab-telstra-tid2-core2:eth1
     fillColor:
       thresholds: *thresholds-operstate
