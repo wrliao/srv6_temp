@@ -265,7 +265,7 @@ cells:
     fillColor:
       thresholds: *thresholds-operstate
   link_id:clab-telstra-tid2-srv6-pe1:eth3:clab-telstra-tid2-ce1:eth1:
-    dataRef: clab-telstra-tid2-srv6-pe1:eth3:out
+    dataRef: clab-telstra-tid2-srv6-pe1:eth3:in
     label: *label-config
     strokeColor:
       thresholds: *thresholds-traffic
@@ -292,7 +292,7 @@ cells:
     fillColor:
       thresholds: *thresholds-operstate
   link_id:clab-telstra-tid2-srv6-pe2:eth3:clab-telstra-tid2-ce1:eth2:
-    dataRef: clab-telstra-tid2-srv6-pe2:eth3:out
+    dataRef: clab-telstra-tid2-srv6-pe2:eth3:in
     label: *label-config
     strokeColor:
       thresholds: *thresholds-traffic
@@ -445,7 +445,7 @@ cells:
     fillColor:
       thresholds: *thresholds-operstate
   link_id:clab-telstra-tid2-ce1:eth5:clab-telstra-tid2-client-1:eth1:
-    dataRef: clab-telstra-tid2-ce1:eth5:out
+    dataRef: clab-telstra-tid2-ce1:eth5:in
     label: *label-config
     strokeColor:
       thresholds: *thresholds-traffic
@@ -472,7 +472,7 @@ cells:
     fillColor:
       thresholds: *thresholds-operstate
   link_id:clab-telstra-tid2-ce2:eth5:clab-telstra-tid2-client-2:eth1:
-    dataRef: clab-telstra-tid2-ce2:eth5:out
+    dataRef: clab-telstra-tid2-ce2:eth5:in
     label: *label-config
     strokeColor:
       thresholds: *thresholds-traffic
