@@ -1,0 +1,145 @@
+name: 2_nodes
+
+topology:
+  kinds:
+    nokia_sros:
+      image: vr-sros:latest
+      type: "chassis=sr-1 slot=A card=cpm-1 slot=1 mda/1=me12-100gb-qsfp28 mda/2=me12-100gb-qsfp28"
+      license: license-sros22.txt
+    linux:
+      image: mtool:latest
+
+  nodes:
+    sr1-1: 
+      kind: nokia_sros
+#      mgmt_ipv4: 172.27.0.113
+      license: license-sros22.txt
+      group : 5
+      cpu-set : 31-34 
+      ports:
+        - 57501:22
+      labels:
+        fabric: no
+        graph-level: 2
+        graph-icon: router
+    sr1-2:
+      kind: nokia_sros
+#      mgmt_ipv4: 172.27.0.114
+      license: license-sros22.txt
+      group : 5
+      cpu-set : 31-34
+      ports:
+        - 57502:22
+      labels:
+        fabric: no
+        graph-level: 8
+        graph-icon: router
+
+    client-1:
+      kind: linux
+      binds:
+        - ./configs/clients:/config
+      exec:
+        - bash /config/eth1.sh
+        - ip addr add 101.0.1.10/24 dev eth1.1
+        - ip addr add 101.1.1.10/24 dev eth1.10
+        - ip addr add 101.2.1.10/24 dev eth1.20
+        - ip addr add 101.11.1.10/24 dev eth1.30
+        - ip r add 103.0.1.0/24 via 101.0.1.1
+        - ip r add 103.1.1.0/24 via 101.1.1.1
+        - ip r add 103.2.1.0/24 via 101.2.1.1
+        - ip r add 103.11.1.0/24 via 101.11.1.1
+        - ip r add 104.0.1.0/24 via 101.0.1.1
+        - ip r add 104.1.1.0/24 via 101.1.1.1
+        - ip r add 104.2.1.0/24 via 101.2.1.1
+        - ip r add 104.11.1.0/24 via 101.11.1.1
+      cpu-set : 35-36
+      ports:
+        - 59631:22
+      labels:
+        fabric: no
+        graph-level: 1 
+        graph-icon: server
+
+    client-2:
+      kind: linux
+      binds:
+        - ./configs/clients:/config
+      exec:
+        - bash /config/eth1.sh
+        - ip addr add 102.0.1.10/24 dev eth1.1
+        - ip addr add 102.1.1.10/24 dev eth1.10
+        - ip addr add 102.2.1.10/24 dev eth1.20
+        - ip addr add 102.11.1.10/24 dev eth1.30
+      cpu-set : 35-36
+      ports:
+        - 59632:22
+      labels:
+        fabric: no
+        graph-level: 9
+        graph-icon: server
+
+### TELEMETRY STACK ###
+    gnmic:
+      kind: linux
+      image: ghcr.io/openconfig/gnmic:0.39.1
+      binds:
+        - ./configs/gnmic/gnmic-config.yaml:/gnmic-config.yaml:ro
+      cmd: --config /gnmic-config.yaml --log subscribe
+#      ports:
+#        - 9804:9804
+      cpu-set : 37
+      group: 10
+#      labels:
+#        fabric: no
+#        graph-level: 10 
+#        graph-icon: host 
+
+    prometheus:
+      kind: linux
+      image: prom/prometheus:v2.54.1
+      binds:
+        - ./configs/prometheus/prometheus.yaml:/etc/prometheus/prometheus.yaml:ro
+      ports:
+        - 9090:9090
+      cmd: --config.file=/etc/prometheus/prometheus.yaml
+      cpu-set : 38
+      group: 10
+#      labels:
+#        fabric: no
+#        graph-level: 10 
+#        graph-icon: host
+
+    grafana:
+      kind: linux
+      image: grafana/grafana:latest
+      binds:
+        - ./configs/grafana/datasource.yaml:/etc/grafana/provisioning/datasources/datasource.yaml:ro
+        - ./configs/grafana/dashboards.yaml:/etc/grafana/provisioning/dashboards/dashboards.yaml:ro
+        - ./configs/grafana/dashboards/:/var/lib/grafana/dashboards
+      ports:
+        - 3000:3000
+      env:
+        HTTPS_PROXY: ${http_proxy}
+        GF_INSTALL_PLUGINS: "andrewbmchugh-flow-panel"
+        # env vars to enable anonymous access
+        GF_ORG_ROLE: "Admin"
+        GF_ORG_NAME: "Main Org"
+        GF_AUTH_ANONYMOUS_ENABLED: "true"
+        GF_AUTH_ANONYMOUS_ORG_ROLE: Admin
+        GF_AUTH_ANONYMOUS: "true"
+        GF_AUTH_OAUTH_AUTO_LOGIN: "true"
+#        GF_SECURITY_ALLOW_EMBEDDING: "true"
+#        GF_DASHBOARDS_MIN_REFRESH_INTERVAL: 2s
+      cpu-set : 39
+      group: 10
+#      labels:
+#        fabric: no
+#        graph-level: 10 
+#        graph-icon: host
+
+  links:
+    - endpoints: ["sr1-1:eth1", "sr1-2:eth1"]
+    - endpoints: ["sr1-1:eth2", "sr1-2:eth2"] 
+    - endpoints: ["sr1-1:eth3", "client-1:eth1"]
+    - endpoints: ["sr1-2:eth3", "client-2:eth1"]
