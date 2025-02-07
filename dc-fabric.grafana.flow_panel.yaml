@@ -1,0 +1,712 @@
+---
+anchors:
+  thresholds-operstate: &thresholds-operstate
+  - color: red
+    level: 0
+  - color: green
+    level: 1
+  thresholds-traffic: &thresholds-traffic
+  - color: gray
+    level: 0
+  - color: green
+    level: 199999
+  - color: yellow
+    level: 500000
+  - color: orange
+    level: 1000000
+  - color: red
+    level: 5000000
+  label-config: &label-config
+    separator: replace
+    units: bps
+    decimalPoints: 1
+    valueMappings:
+    - valueMax: 199999
+      text: ​
+    - valueMin: 200000
+cellIdPreamble: cell-
+cells:
+  clab-dc-fabric-dcgw1-1:eth1:clab-dc-fabric-spine1-1:e1-31:
+    dataRef: oper-state:clab-dc-fabric-dcgw1-1:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw1-1:eth1:clab-dc-fabric-spine1-1:e1-31:
+    dataRef: clab-dc-fabric-dcgw1-1:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw1-1:eth2:clab-dc-fabric-spine1-2:e1-31:
+    dataRef: oper-state:clab-dc-fabric-dcgw1-1:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw1-1:eth2:clab-dc-fabric-spine1-2:e1-31:
+    dataRef: clab-dc-fabric-dcgw1-1:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw1-1:eth3:clab-dc-fabric-client1-4:eth1:
+    dataRef: oper-state:clab-dc-fabric-dcgw1-1:eth3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw1-1:eth3:clab-dc-fabric-client1-4:eth1:
+    dataRef: clab-dc-fabric-dcgw1-1:eth3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw1-1:eth4:clab-dc-fabric-dcgw1-2:eth4:
+    dataRef: oper-state:clab-dc-fabric-dcgw1-1:eth4
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw1-1:eth4:clab-dc-fabric-dcgw1-2:eth4:
+    dataRef: clab-dc-fabric-dcgw1-1:eth4:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw1-1:eth5:clab-dc-fabric-dcgw2-1:eth5:
+    dataRef: oper-state:clab-dc-fabric-dcgw1-1:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw1-1:eth5:clab-dc-fabric-dcgw2-1:eth5:
+    dataRef: clab-dc-fabric-dcgw1-1:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw1-1:eth6:clab-dc-fabric-dcgw2-2:eth6:
+    dataRef: oper-state:clab-dc-fabric-dcgw1-1:eth6
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw1-1:eth6:clab-dc-fabric-dcgw2-2:eth6:
+    dataRef: clab-dc-fabric-dcgw1-1:eth6:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw1-2:eth1:clab-dc-fabric-spine1-1:e1-32:
+    dataRef: oper-state:clab-dc-fabric-dcgw1-2:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw1-2:eth1:clab-dc-fabric-spine1-1:e1-32:
+    dataRef: clab-dc-fabric-dcgw1-2:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw1-2:eth2:clab-dc-fabric-spine1-2:e1-32:
+    dataRef: oper-state:clab-dc-fabric-dcgw1-2:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw1-2:eth2:clab-dc-fabric-spine1-2:e1-32:
+    dataRef: clab-dc-fabric-dcgw1-2:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw1-2:eth3:clab-dc-fabric-client1-5:eth1:
+    dataRef: oper-state:clab-dc-fabric-dcgw1-2:eth3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw1-2:eth3:clab-dc-fabric-client1-5:eth1:
+    dataRef: clab-dc-fabric-dcgw1-2:eth3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw1-2:eth4:clab-dc-fabric-dcgw1-1:eth4:
+    dataRef: oper-state:clab-dc-fabric-dcgw1-2:eth4
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw1-2:eth4:clab-dc-fabric-dcgw1-1:eth4:
+    dataRef: clab-dc-fabric-dcgw1-2:eth4:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw1-2:eth5:clab-dc-fabric-dcgw2-2:eth5:
+    dataRef: oper-state:clab-dc-fabric-dcgw1-2:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw1-2:eth5:clab-dc-fabric-dcgw2-2:eth5:
+    dataRef: clab-dc-fabric-dcgw1-2:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw1-2:eth6:clab-dc-fabric-dcgw2-1:eth6:
+    dataRef: oper-state:clab-dc-fabric-dcgw1-2:eth6
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw1-2:eth6:clab-dc-fabric-dcgw2-1:eth6:
+    dataRef: clab-dc-fabric-dcgw1-2:eth6:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine1-1:e1-1:clab-dc-fabric-leaf1-1:e1-49:
+    dataRef: oper-state:clab-dc-fabric-spine1-1:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine1-1:e1-1:clab-dc-fabric-leaf1-1:e1-49:
+    dataRef: clab-dc-fabric-spine1-1:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine1-1:e1-2:clab-dc-fabric-leaf1-2:e1-49:
+    dataRef: oper-state:clab-dc-fabric-spine1-1:e1-2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine1-1:e1-2:clab-dc-fabric-leaf1-2:e1-49:
+    dataRef: clab-dc-fabric-spine1-1:e1-2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine1-1:e1-3:clab-dc-fabric-leaf1-3:e1-49:
+    dataRef: oper-state:clab-dc-fabric-spine1-1:e1-3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine1-1:e1-3:clab-dc-fabric-leaf1-3:e1-49:
+    dataRef: clab-dc-fabric-spine1-1:e1-3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine1-1:e1-31:clab-dc-fabric-dcgw1-1:eth1:
+    dataRef: oper-state:clab-dc-fabric-spine1-1:e1-31
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine1-1:e1-31:clab-dc-fabric-dcgw1-1:eth1:
+    dataRef: clab-dc-fabric-spine1-1:e1-31:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine1-1:e1-32:clab-dc-fabric-dcgw1-2:eth1:
+    dataRef: oper-state:clab-dc-fabric-spine1-1:e1-32
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine1-1:e1-32:clab-dc-fabric-dcgw1-2:eth1:
+    dataRef: clab-dc-fabric-spine1-1:e1-32:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine1-2:e1-1:clab-dc-fabric-leaf1-1:e1-50:
+    dataRef: oper-state:clab-dc-fabric-spine1-2:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine1-2:e1-1:clab-dc-fabric-leaf1-1:e1-50:
+    dataRef: clab-dc-fabric-spine1-2:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine1-2:e1-2:clab-dc-fabric-leaf1-2:e1-50:
+    dataRef: oper-state:clab-dc-fabric-spine1-2:e1-2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine1-2:e1-2:clab-dc-fabric-leaf1-2:e1-50:
+    dataRef: clab-dc-fabric-spine1-2:e1-2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine1-2:e1-3:clab-dc-fabric-leaf1-3:e1-50:
+    dataRef: oper-state:clab-dc-fabric-spine1-2:e1-3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine1-2:e1-3:clab-dc-fabric-leaf1-3:e1-50:
+    dataRef: clab-dc-fabric-spine1-2:e1-3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine1-2:e1-31:clab-dc-fabric-dcgw1-1:eth2:
+    dataRef: oper-state:clab-dc-fabric-spine1-2:e1-31
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine1-2:e1-31:clab-dc-fabric-dcgw1-1:eth2:
+    dataRef: clab-dc-fabric-spine1-2:e1-31:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine1-2:e1-32:clab-dc-fabric-dcgw1-2:eth2:
+    dataRef: oper-state:clab-dc-fabric-spine1-2:e1-32
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine1-2:e1-32:clab-dc-fabric-dcgw1-2:eth2:
+    dataRef: clab-dc-fabric-spine1-2:e1-32:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf1-1:e1-49:clab-dc-fabric-spine1-1:e1-1:
+    dataRef: oper-state:clab-dc-fabric-leaf1-1:e1-49
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf1-1:e1-49:clab-dc-fabric-spine1-1:e1-1:
+    dataRef: clab-dc-fabric-leaf1-1:e1-49:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf1-1:e1-50:clab-dc-fabric-spine1-2:e1-1:
+    dataRef: oper-state:clab-dc-fabric-leaf1-1:e1-50
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf1-1:e1-50:clab-dc-fabric-spine1-2:e1-1:
+    dataRef: clab-dc-fabric-leaf1-1:e1-50:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf1-1:e1-1:clab-dc-fabric-client1-1:eth1:
+    dataRef: oper-state:clab-dc-fabric-leaf1-1:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf1-1:e1-1:clab-dc-fabric-client1-1:eth1:
+    dataRef: clab-dc-fabric-leaf1-1:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf1-2:e1-49:clab-dc-fabric-spine1-1:e1-2:
+    dataRef: oper-state:clab-dc-fabric-leaf1-2:e1-49
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf1-2:e1-49:clab-dc-fabric-spine1-1:e1-2:
+    dataRef: clab-dc-fabric-leaf1-2:e1-49:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf1-2:e1-50:clab-dc-fabric-spine1-2:e1-2:
+    dataRef: oper-state:clab-dc-fabric-leaf1-2:e1-50
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf1-2:e1-50:clab-dc-fabric-spine1-2:e1-2:
+    dataRef: clab-dc-fabric-leaf1-2:e1-50:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf1-2:e1-1:clab-dc-fabric-client1-2:eth1:
+    dataRef: oper-state:clab-dc-fabric-leaf1-2:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf1-2:e1-1:clab-dc-fabric-client1-2:eth1:
+    dataRef: clab-dc-fabric-leaf1-2:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf1-2:e1-2:clab-dc-fabric-client1-6:eth1:
+    dataRef: oper-state:clab-dc-fabric-leaf1-2:e1-2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf1-2:e1-2:clab-dc-fabric-client1-6:eth1:
+    dataRef: clab-dc-fabric-leaf1-2:e1-2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf1-3:e1-49:clab-dc-fabric-spine1-1:e1-3:
+    dataRef: oper-state:clab-dc-fabric-leaf1-3:e1-49
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf1-3:e1-49:clab-dc-fabric-spine1-1:e1-3:
+    dataRef: clab-dc-fabric-leaf1-3:e1-49:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf1-3:e1-50:clab-dc-fabric-spine1-2:e1-3:
+    dataRef: oper-state:clab-dc-fabric-leaf1-3:e1-50
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf1-3:e1-50:clab-dc-fabric-spine1-2:e1-3:
+    dataRef: clab-dc-fabric-leaf1-3:e1-50:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf1-3:e1-1:clab-dc-fabric-client1-3:eth1:
+    dataRef: oper-state:clab-dc-fabric-leaf1-3:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf1-3:e1-1:clab-dc-fabric-client1-3:eth1:
+    dataRef: clab-dc-fabric-leaf1-3:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-client1-1:eth1:clab-dc-fabric-leaf1-1:e1-1:
+    dataRef: oper-state:clab-dc-fabric-client1-1:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-client1-1:eth1:clab-dc-fabric-leaf1-1:e1-1:
+    dataRef: clab-dc-fabric-client1-1:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-client1-2:eth1:clab-dc-fabric-leaf1-2:e1-1:
+    dataRef: oper-state:clab-dc-fabric-client1-2:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-client1-2:eth1:clab-dc-fabric-leaf1-2:e1-1:
+    dataRef: clab-dc-fabric-client1-2:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-client1-3:eth1:clab-dc-fabric-leaf1-3:e1-1:
+    dataRef: oper-state:clab-dc-fabric-client1-3:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-client1-3:eth1:clab-dc-fabric-leaf1-3:e1-1:
+    dataRef: clab-dc-fabric-client1-3:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-client1-4:eth1:clab-dc-fabric-dcgw1-1:eth3:
+    dataRef: oper-state:clab-dc-fabric-client1-4:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-client1-4:eth1:clab-dc-fabric-dcgw1-1:eth3:
+    dataRef: clab-dc-fabric-client1-4:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-client1-5:eth1:clab-dc-fabric-dcgw1-2:eth3:
+    dataRef: oper-state:clab-dc-fabric-client1-5:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-client1-5:eth1:clab-dc-fabric-dcgw1-2:eth3:
+    dataRef: clab-dc-fabric-client1-5:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-client1-6:eth1:clab-dc-fabric-leaf1-2:e1-2:
+    dataRef: oper-state:clab-dc-fabric-client1-6:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-client1-6:eth1:clab-dc-fabric-leaf1-2:e1-2:
+    dataRef: clab-dc-fabric-client1-6:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw2-1:eth1:clab-dc-fabric-spine2-1:e1-31:
+    dataRef: oper-state:clab-dc-fabric-dcgw2-1:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw2-1:eth1:clab-dc-fabric-spine2-1:e1-31:
+    dataRef: clab-dc-fabric-dcgw2-1:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw2-1:eth2:clab-dc-fabric-spine2-2:e1-31:
+    dataRef: oper-state:clab-dc-fabric-dcgw2-1:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw2-1:eth2:clab-dc-fabric-spine2-2:e1-31:
+    dataRef: clab-dc-fabric-dcgw2-1:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw2-1:eth3:clab-dc-fabric-client2-4:eth1:
+    dataRef: oper-state:clab-dc-fabric-dcgw2-1:eth3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw2-1:eth3:clab-dc-fabric-client2-4:eth1:
+    dataRef: clab-dc-fabric-dcgw2-1:eth3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw2-1:eth4:clab-dc-fabric-dcgw2-2:eth4:
+    dataRef: oper-state:clab-dc-fabric-dcgw2-1:eth4
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw2-1:eth4:clab-dc-fabric-dcgw2-2:eth4:
+    dataRef: clab-dc-fabric-dcgw2-1:eth4:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw2-1:eth5:clab-dc-fabric-dcgw1-1:eth5:
+    dataRef: oper-state:clab-dc-fabric-dcgw2-1:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw2-1:eth5:clab-dc-fabric-dcgw1-1:eth5:
+    dataRef: clab-dc-fabric-dcgw2-1:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw2-1:eth6:clab-dc-fabric-dcgw1-2:eth6:
+    dataRef: oper-state:clab-dc-fabric-dcgw2-1:eth6
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw2-1:eth6:clab-dc-fabric-dcgw1-2:eth6:
+    dataRef: clab-dc-fabric-dcgw2-1:eth6:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw2-2:eth1:clab-dc-fabric-spine2-1:e1-32:
+    dataRef: oper-state:clab-dc-fabric-dcgw2-2:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw2-2:eth1:clab-dc-fabric-spine2-1:e1-32:
+    dataRef: clab-dc-fabric-dcgw2-2:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw2-2:eth2:clab-dc-fabric-spine2-2:e1-32:
+    dataRef: oper-state:clab-dc-fabric-dcgw2-2:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw2-2:eth2:clab-dc-fabric-spine2-2:e1-32:
+    dataRef: clab-dc-fabric-dcgw2-2:eth2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw2-2:eth3:clab-dc-fabric-client2-5:eth1:
+    dataRef: oper-state:clab-dc-fabric-dcgw2-2:eth3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw2-2:eth3:clab-dc-fabric-client2-5:eth1:
+    dataRef: clab-dc-fabric-dcgw2-2:eth3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw2-2:eth4:clab-dc-fabric-dcgw2-1:eth4:
+    dataRef: oper-state:clab-dc-fabric-dcgw2-2:eth4
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw2-2:eth4:clab-dc-fabric-dcgw2-1:eth4:
+    dataRef: clab-dc-fabric-dcgw2-2:eth4:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw2-2:eth5:clab-dc-fabric-dcgw1-2:eth5:
+    dataRef: oper-state:clab-dc-fabric-dcgw2-2:eth5
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw2-2:eth5:clab-dc-fabric-dcgw1-2:eth5:
+    dataRef: clab-dc-fabric-dcgw2-2:eth5:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-dcgw2-2:eth6:clab-dc-fabric-dcgw1-1:eth6:
+    dataRef: oper-state:clab-dc-fabric-dcgw2-2:eth6
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-dcgw2-2:eth6:clab-dc-fabric-dcgw1-1:eth6:
+    dataRef: clab-dc-fabric-dcgw2-2:eth6:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine2-1:e1-1:clab-dc-fabric-leaf2-1:e1-49:
+    dataRef: oper-state:clab-dc-fabric-spine2-1:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine2-1:e1-1:clab-dc-fabric-leaf2-1:e1-49:
+    dataRef: clab-dc-fabric-spine2-1:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine2-1:e1-2:clab-dc-fabric-leaf2-2:e1-49:
+    dataRef: oper-state:clab-dc-fabric-spine2-1:e1-2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine2-1:e1-2:clab-dc-fabric-leaf2-2:e1-49:
+    dataRef: clab-dc-fabric-spine2-1:e1-2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine2-1:e1-3:clab-dc-fabric-leaf2-3:e1-49:
+    dataRef: oper-state:clab-dc-fabric-spine2-1:e1-3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine2-1:e1-3:clab-dc-fabric-leaf2-3:e1-49:
+    dataRef: clab-dc-fabric-spine2-1:e1-3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine2-1:e1-31:clab-dc-fabric-dcgw2-1:eth1:
+    dataRef: oper-state:clab-dc-fabric-spine2-1:e1-31
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine2-1:e1-31:clab-dc-fabric-dcgw2-1:eth1:
+    dataRef: clab-dc-fabric-spine2-1:e1-31:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine2-1:e1-32:clab-dc-fabric-dcgw2-2:eth1:
+    dataRef: oper-state:clab-dc-fabric-spine2-1:e1-32
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine2-1:e1-32:clab-dc-fabric-dcgw2-2:eth1:
+    dataRef: clab-dc-fabric-spine2-1:e1-32:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine2-2:e1-1:clab-dc-fabric-leaf2-1:e1-50:
+    dataRef: oper-state:clab-dc-fabric-spine2-2:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine2-2:e1-1:clab-dc-fabric-leaf2-1:e1-50:
+    dataRef: clab-dc-fabric-spine2-2:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine2-2:e1-2:clab-dc-fabric-leaf2-2:e1-50:
+    dataRef: oper-state:clab-dc-fabric-spine2-2:e1-2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine2-2:e1-2:clab-dc-fabric-leaf2-2:e1-50:
+    dataRef: clab-dc-fabric-spine2-2:e1-2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine2-2:e1-3:clab-dc-fabric-leaf2-3:e1-50:
+    dataRef: oper-state:clab-dc-fabric-spine2-2:e1-3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine2-2:e1-3:clab-dc-fabric-leaf2-3:e1-50:
+    dataRef: clab-dc-fabric-spine2-2:e1-3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine2-2:e1-31:clab-dc-fabric-dcgw2-1:eth2:
+    dataRef: oper-state:clab-dc-fabric-spine2-2:e1-31
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine2-2:e1-31:clab-dc-fabric-dcgw2-1:eth2:
+    dataRef: clab-dc-fabric-spine2-2:e1-31:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-spine2-2:e1-32:clab-dc-fabric-dcgw2-2:eth2:
+    dataRef: oper-state:clab-dc-fabric-spine2-2:e1-32
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-spine2-2:e1-32:clab-dc-fabric-dcgw2-2:eth2:
+    dataRef: clab-dc-fabric-spine2-2:e1-32:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf2-1:e1-49:clab-dc-fabric-spine2-1:e1-1:
+    dataRef: oper-state:clab-dc-fabric-leaf2-1:e1-49
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf2-1:e1-49:clab-dc-fabric-spine2-1:e1-1:
+    dataRef: clab-dc-fabric-leaf2-1:e1-49:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf2-1:e1-50:clab-dc-fabric-spine2-2:e1-1:
+    dataRef: oper-state:clab-dc-fabric-leaf2-1:e1-50
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf2-1:e1-50:clab-dc-fabric-spine2-2:e1-1:
+    dataRef: clab-dc-fabric-leaf2-1:e1-50:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf2-1:e1-1:clab-dc-fabric-client2-1:eth1:
+    dataRef: oper-state:clab-dc-fabric-leaf2-1:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf2-1:e1-1:clab-dc-fabric-client2-1:eth1:
+    dataRef: clab-dc-fabric-leaf2-1:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf2-2:e1-49:clab-dc-fabric-spine2-1:e1-2:
+    dataRef: oper-state:clab-dc-fabric-leaf2-2:e1-49
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf2-2:e1-49:clab-dc-fabric-spine2-1:e1-2:
+    dataRef: clab-dc-fabric-leaf2-2:e1-49:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf2-2:e1-50:clab-dc-fabric-spine2-2:e1-2:
+    dataRef: oper-state:clab-dc-fabric-leaf2-2:e1-50
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf2-2:e1-50:clab-dc-fabric-spine2-2:e1-2:
+    dataRef: clab-dc-fabric-leaf2-2:e1-50:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf2-2:e1-1:clab-dc-fabric-client2-2:eth1:
+    dataRef: oper-state:clab-dc-fabric-leaf2-2:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf2-2:e1-1:clab-dc-fabric-client2-2:eth1:
+    dataRef: clab-dc-fabric-leaf2-2:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf2-2:e1-2:clab-dc-fabric-client2-6:eth1:
+    dataRef: oper-state:clab-dc-fabric-leaf2-2:e1-2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf2-2:e1-2:clab-dc-fabric-client2-6:eth1:
+    dataRef: clab-dc-fabric-leaf2-2:e1-2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf2-3:e1-49:clab-dc-fabric-spine2-1:e1-3:
+    dataRef: oper-state:clab-dc-fabric-leaf2-3:e1-49
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf2-3:e1-49:clab-dc-fabric-spine2-1:e1-3:
+    dataRef: clab-dc-fabric-leaf2-3:e1-49:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf2-3:e1-50:clab-dc-fabric-spine2-2:e1-3:
+    dataRef: oper-state:clab-dc-fabric-leaf2-3:e1-50
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf2-3:e1-50:clab-dc-fabric-spine2-2:e1-3:
+    dataRef: clab-dc-fabric-leaf2-3:e1-50:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-leaf2-3:e1-1:clab-dc-fabric-client2-3:eth1:
+    dataRef: oper-state:clab-dc-fabric-leaf2-3:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-leaf2-3:e1-1:clab-dc-fabric-client2-3:eth1:
+    dataRef: clab-dc-fabric-leaf2-3:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-client2-1:eth1:clab-dc-fabric-leaf2-1:e1-1:
+    dataRef: oper-state:clab-dc-fabric-client2-1:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-client2-1:eth1:clab-dc-fabric-leaf2-1:e1-1:
+    dataRef: clab-dc-fabric-client2-1:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-client2-2:eth1:clab-dc-fabric-leaf2-2:e1-1:
+    dataRef: oper-state:clab-dc-fabric-client2-2:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-client2-2:eth1:clab-dc-fabric-leaf2-2:e1-1:
+    dataRef: clab-dc-fabric-client2-2:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-client2-3:eth1:clab-dc-fabric-leaf2-3:e1-1:
+    dataRef: oper-state:clab-dc-fabric-client2-3:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-client2-3:eth1:clab-dc-fabric-leaf2-3:e1-1:
+    dataRef: clab-dc-fabric-client2-3:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-client2-4:eth1:clab-dc-fabric-dcgw2-1:eth3:
+    dataRef: oper-state:clab-dc-fabric-client2-4:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-client2-4:eth1:clab-dc-fabric-dcgw2-1:eth3:
+    dataRef: clab-dc-fabric-client2-4:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-client2-5:eth1:clab-dc-fabric-dcgw2-2:eth3:
+    dataRef: oper-state:clab-dc-fabric-client2-5:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-client2-5:eth1:clab-dc-fabric-dcgw2-2:eth3:
+    dataRef: clab-dc-fabric-client2-5:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-dc-fabric-client2-6:eth1:clab-dc-fabric-leaf2-2:e1-2:
+    dataRef: oper-state:clab-dc-fabric-client2-6:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-dc-fabric-client2-6:eth1:clab-dc-fabric-leaf2-2:e1-2:
+    dataRef: clab-dc-fabric-client2-6:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
