@@ -1,0 +1,568 @@
+---
+anchors:
+  thresholds-operstate: &thresholds-operstate
+  - color: red
+    level: 0
+  - color: green
+    level: 1
+  thresholds-traffic: &thresholds-traffic
+  - color: gray
+    level: 0
+  - color: green
+    level: 199999
+  - color: yellow
+    level: 500000
+  - color: orange
+    level: 1000000
+  - color: red
+    level: 5000000
+  label-config: &label-config
+    separator: replace
+    units: bps
+    decimalPoints: 1
+    valueMappings:
+    - valueMax: 199999
+      text: ​
+    - valueMin: 200000
+cellIdPreamble: cell-
+cells:
+  clab-srv6-srsim-core1:e1-1-c1-1:clab-srv6-srsim-core2:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-core1:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core1:e1-1-c1-1:clab-srv6-srsim-core2:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-core1:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core1:e1-1-c2-1:clab-srv6-srsim-core3:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-core1:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core1:e1-1-c2-1:clab-srv6-srsim-core3:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-core1:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core1:e1-1-c3-1:clab-srv6-srsim-core5:e1-1-c4-1:
+    dataRef: oper-state:clab-srv6-srsim-core1:e1-1-c3-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core1:e1-1-c3-1:clab-srv6-srsim-core5:e1-1-c4-1:
+    dataRef: clab-srv6-srsim-core1:e1-1-c3-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core1:e1-1-c4-1:clab-srv6-srsim-srv6-gw1:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-core1:e1-1-c4-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core1:e1-1-c4-1:clab-srv6-srsim-srv6-gw1:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-core1:e1-1-c4-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core1:e1-1-c5-1:clab-srv6-srsim-srv6-gw2:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-core1:e1-1-c5-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core1:e1-1-c5-1:clab-srv6-srsim-srv6-gw2:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-core1:e1-1-c5-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core2:e1-1-c1-1:clab-srv6-srsim-core1:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-core2:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core2:e1-1-c1-1:clab-srv6-srsim-core1:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-core2:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core2:e1-1-c2-1:clab-srv6-srsim-core3:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-core2:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core2:e1-1-c2-1:clab-srv6-srsim-core3:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-core2:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core2:e1-1-c3-1:clab-srv6-srsim-core6:e1-1-c4-1:
+    dataRef: oper-state:clab-srv6-srsim-core2:e1-1-c3-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core2:e1-1-c3-1:clab-srv6-srsim-core6:e1-1-c4-1:
+    dataRef: clab-srv6-srsim-core2:e1-1-c3-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core2:e1-1-c4-1:clab-srv6-srsim-srv6-gw1:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-core2:e1-1-c4-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core2:e1-1-c4-1:clab-srv6-srsim-srv6-gw1:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-core2:e1-1-c4-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core2:e1-1-c5-1:clab-srv6-srsim-srv6-gw2:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-core2:e1-1-c5-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core2:e1-1-c5-1:clab-srv6-srsim-srv6-gw2:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-core2:e1-1-c5-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core3:e1-1-c1-1:clab-srv6-srsim-core1:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-core3:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core3:e1-1-c1-1:clab-srv6-srsim-core1:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-core3:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core3:e1-1-c2-1:clab-srv6-srsim-core2:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-core3:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core3:e1-1-c2-1:clab-srv6-srsim-core2:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-core3:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core3:e1-1-c5-1:clab-srv6-srsim-core5:e1-1-c3-1:
+    dataRef: oper-state:clab-srv6-srsim-core3:e1-1-c5-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core3:e1-1-c5-1:clab-srv6-srsim-core5:e1-1-c3-1:
+    dataRef: clab-srv6-srsim-core3:e1-1-c5-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core3:e1-1-c6-1:clab-srv6-srsim-core6:e1-1-c3-1:
+    dataRef: oper-state:clab-srv6-srsim-core3:e1-1-c6-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core3:e1-1-c6-1:clab-srv6-srsim-core6:e1-1-c3-1:
+    dataRef: clab-srv6-srsim-core3:e1-1-c6-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core5:e1-1-c4-1:clab-srv6-srsim-core1:e1-1-c3-1:
+    dataRef: oper-state:clab-srv6-srsim-core5:e1-1-c4-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core5:e1-1-c4-1:clab-srv6-srsim-core1:e1-1-c3-1:
+    dataRef: clab-srv6-srsim-core5:e1-1-c4-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core5:e1-1-c1-1:clab-srv6-srsim-srv6-pe1:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-core5:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core5:e1-1-c1-1:clab-srv6-srsim-srv6-pe1:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-core5:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core5:e1-1-c2-1:clab-srv6-srsim-mpls-pe1:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-core5:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core5:e1-1-c2-1:clab-srv6-srsim-mpls-pe1:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-core5:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core5:e1-1-c3-1:clab-srv6-srsim-core3:e1-1-c5-1:
+    dataRef: oper-state:clab-srv6-srsim-core5:e1-1-c3-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core5:e1-1-c3-1:clab-srv6-srsim-core3:e1-1-c5-1:
+    dataRef: clab-srv6-srsim-core5:e1-1-c3-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core5:e1-1-c5-1:clab-srv6-srsim-core6:e1-1-c5-1:
+    dataRef: oper-state:clab-srv6-srsim-core5:e1-1-c5-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core5:e1-1-c5-1:clab-srv6-srsim-core6:e1-1-c5-1:
+    dataRef: clab-srv6-srsim-core5:e1-1-c5-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core6:e1-1-c4-1:clab-srv6-srsim-core2:e1-1-c3-1:
+    dataRef: oper-state:clab-srv6-srsim-core6:e1-1-c4-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core6:e1-1-c4-1:clab-srv6-srsim-core2:e1-1-c3-1:
+    dataRef: clab-srv6-srsim-core6:e1-1-c4-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core6:e1-1-c5-1:clab-srv6-srsim-core5:e1-1-c5-1:
+    dataRef: oper-state:clab-srv6-srsim-core6:e1-1-c5-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core6:e1-1-c5-1:clab-srv6-srsim-core5:e1-1-c5-1:
+    dataRef: clab-srv6-srsim-core6:e1-1-c5-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core6:e1-1-c1-1:clab-srv6-srsim-srv6-pe2:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-core6:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core6:e1-1-c1-1:clab-srv6-srsim-srv6-pe2:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-core6:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core6:e1-1-c2-1:clab-srv6-srsim-mpls-pe2:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-core6:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core6:e1-1-c2-1:clab-srv6-srsim-mpls-pe2:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-core6:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-core6:e1-1-c3-1:clab-srv6-srsim-core3:e1-1-c6-1:
+    dataRef: oper-state:clab-srv6-srsim-core6:e1-1-c3-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-core6:e1-1-c3-1:clab-srv6-srsim-core3:e1-1-c6-1:
+    dataRef: clab-srv6-srsim-core6:e1-1-c3-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-srv6-pe1:e1-1-c1-1:clab-srv6-srsim-core5:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-srv6-pe1:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-srv6-pe1:e1-1-c1-1:clab-srv6-srsim-core5:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-srv6-pe1:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-srv6-pe1:e1-1-c2-1:clab-srv6-srsim-srv6-pe2:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-srv6-pe1:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-srv6-pe1:e1-1-c2-1:clab-srv6-srsim-srv6-pe2:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-srv6-pe1:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-srv6-pe1:e1-1-c3-1:clab-srv6-srsim-ce1:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-srv6-pe1:e1-1-c3-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-srv6-pe1:e1-1-c3-1:clab-srv6-srsim-ce1:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-srv6-pe1:e1-1-c3-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-srv6-pe2:e1-1-c1-1:clab-srv6-srsim-core6:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-srv6-pe2:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-srv6-pe2:e1-1-c1-1:clab-srv6-srsim-core6:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-srv6-pe2:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-srv6-pe2:e1-1-c2-1:clab-srv6-srsim-srv6-pe1:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-srv6-pe2:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-srv6-pe2:e1-1-c2-1:clab-srv6-srsim-srv6-pe1:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-srv6-pe2:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-srv6-pe2:e1-1-c3-1:clab-srv6-srsim-ce1:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-srv6-pe2:e1-1-c3-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-srv6-pe2:e1-1-c3-1:clab-srv6-srsim-ce1:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-srv6-pe2:e1-1-c3-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-srv6-gw1:e1-1-c1-1:clab-srv6-srsim-core1:e1-1-c4-1:
+    dataRef: oper-state:clab-srv6-srsim-srv6-gw1:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-srv6-gw1:e1-1-c1-1:clab-srv6-srsim-core1:e1-1-c4-1:
+    dataRef: clab-srv6-srsim-srv6-gw1:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-srv6-gw1:e1-1-c2-1:clab-srv6-srsim-core2:e1-1-c4-1:
+    dataRef: oper-state:clab-srv6-srsim-srv6-gw1:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-srv6-gw1:e1-1-c2-1:clab-srv6-srsim-core2:e1-1-c4-1:
+    dataRef: clab-srv6-srsim-srv6-gw1:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-srv6-gw1:e1-1-c4-1:clab-srv6-srsim-ce3:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-srv6-gw1:e1-1-c4-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-srv6-gw1:e1-1-c4-1:clab-srv6-srsim-ce3:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-srv6-gw1:e1-1-c4-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-srv6-gw1:e1-1-c5-1:clab-srv6-srsim-ce4:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-srv6-gw1:e1-1-c5-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-srv6-gw1:e1-1-c5-1:clab-srv6-srsim-ce4:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-srv6-gw1:e1-1-c5-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-srv6-gw2:e1-1-c1-1:clab-srv6-srsim-core1:e1-1-c5-1:
+    dataRef: oper-state:clab-srv6-srsim-srv6-gw2:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-srv6-gw2:e1-1-c1-1:clab-srv6-srsim-core1:e1-1-c5-1:
+    dataRef: clab-srv6-srsim-srv6-gw2:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-srv6-gw2:e1-1-c2-1:clab-srv6-srsim-core2:e1-1-c5-1:
+    dataRef: oper-state:clab-srv6-srsim-srv6-gw2:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-srv6-gw2:e1-1-c2-1:clab-srv6-srsim-core2:e1-1-c5-1:
+    dataRef: clab-srv6-srsim-srv6-gw2:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-srv6-gw2:e1-1-c4-1:clab-srv6-srsim-ce3:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-srv6-gw2:e1-1-c4-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-srv6-gw2:e1-1-c4-1:clab-srv6-srsim-ce3:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-srv6-gw2:e1-1-c4-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-srv6-gw2:e1-1-c5-1:clab-srv6-srsim-ce4:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-srv6-gw2:e1-1-c5-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-srv6-gw2:e1-1-c5-1:clab-srv6-srsim-ce4:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-srv6-gw2:e1-1-c5-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-mpls-pe1:e1-1-c1-1:clab-srv6-srsim-core5:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-mpls-pe1:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-mpls-pe1:e1-1-c1-1:clab-srv6-srsim-core5:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-mpls-pe1:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-mpls-pe1:e1-1-c2-1:clab-srv6-srsim-mpls-pe2:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-mpls-pe1:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-mpls-pe1:e1-1-c2-1:clab-srv6-srsim-mpls-pe2:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-mpls-pe1:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-mpls-pe1:e1-1-c3-1:clab-srv6-srsim-ce2:e1-1-c1-1:
+    dataRef: oper-state:clab-srv6-srsim-mpls-pe1:e1-1-c3-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-mpls-pe1:e1-1-c3-1:clab-srv6-srsim-ce2:e1-1-c1-1:
+    dataRef: clab-srv6-srsim-mpls-pe1:e1-1-c3-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-mpls-pe2:e1-1-c1-1:clab-srv6-srsim-core6:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-mpls-pe2:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-mpls-pe2:e1-1-c1-1:clab-srv6-srsim-core6:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-mpls-pe2:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-mpls-pe2:e1-1-c2-1:clab-srv6-srsim-mpls-pe1:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-mpls-pe2:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-mpls-pe2:e1-1-c2-1:clab-srv6-srsim-mpls-pe1:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-mpls-pe2:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-mpls-pe2:e1-1-c3-1:clab-srv6-srsim-ce2:e1-1-c2-1:
+    dataRef: oper-state:clab-srv6-srsim-mpls-pe2:e1-1-c3-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-mpls-pe2:e1-1-c3-1:clab-srv6-srsim-ce2:e1-1-c2-1:
+    dataRef: clab-srv6-srsim-mpls-pe2:e1-1-c3-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-ce1:e1-1-c1-1:clab-srv6-srsim-srv6-pe1:e1-1-c3-1:
+    dataRef: oper-state:clab-srv6-srsim-ce1:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-ce1:e1-1-c1-1:clab-srv6-srsim-srv6-pe1:e1-1-c3-1:
+    dataRef: clab-srv6-srsim-ce1:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-ce1:e1-1-c2-1:clab-srv6-srsim-srv6-pe2:e1-1-c3-1:
+    dataRef: oper-state:clab-srv6-srsim-ce1:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-ce1:e1-1-c2-1:clab-srv6-srsim-srv6-pe2:e1-1-c3-1:
+    dataRef: clab-srv6-srsim-ce1:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-ce1:e1-1-c5-1:clab-srv6-srsim-client-1:eth1:
+    dataRef: oper-state:clab-srv6-srsim-ce1:e1-1-c5-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-ce1:e1-1-c5-1:clab-srv6-srsim-client-1:eth1:
+    dataRef: clab-srv6-srsim-ce1:e1-1-c5-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-ce2:e1-1-c1-1:clab-srv6-srsim-mpls-pe1:e1-1-c3-1:
+    dataRef: oper-state:clab-srv6-srsim-ce2:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-ce2:e1-1-c1-1:clab-srv6-srsim-mpls-pe1:e1-1-c3-1:
+    dataRef: clab-srv6-srsim-ce2:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-ce2:e1-1-c2-1:clab-srv6-srsim-mpls-pe2:e1-1-c3-1:
+    dataRef: oper-state:clab-srv6-srsim-ce2:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-ce2:e1-1-c2-1:clab-srv6-srsim-mpls-pe2:e1-1-c3-1:
+    dataRef: clab-srv6-srsim-ce2:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-ce2:e1-1-c5-1:clab-srv6-srsim-client-2:eth1:
+    dataRef: oper-state:clab-srv6-srsim-ce2:e1-1-c5-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-ce2:e1-1-c5-1:clab-srv6-srsim-client-2:eth1:
+    dataRef: clab-srv6-srsim-ce2:e1-1-c5-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-ce3:e1-1-c1-1:clab-srv6-srsim-srv6-gw1:e1-1-c4-1:
+    dataRef: oper-state:clab-srv6-srsim-ce3:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-ce3:e1-1-c1-1:clab-srv6-srsim-srv6-gw1:e1-1-c4-1:
+    dataRef: clab-srv6-srsim-ce3:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-ce3:e1-1-c2-1:clab-srv6-srsim-srv6-gw2:e1-1-c4-1:
+    dataRef: oper-state:clab-srv6-srsim-ce3:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-ce3:e1-1-c2-1:clab-srv6-srsim-srv6-gw2:e1-1-c4-1:
+    dataRef: clab-srv6-srsim-ce3:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-ce3:e1-1-c5-1:clab-srv6-srsim-client-3:eth1:
+    dataRef: oper-state:clab-srv6-srsim-ce3:e1-1-c5-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-ce3:e1-1-c5-1:clab-srv6-srsim-client-3:eth1:
+    dataRef: clab-srv6-srsim-ce3:e1-1-c5-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-ce4:e1-1-c1-1:clab-srv6-srsim-srv6-gw1:e1-1-c5-1:
+    dataRef: oper-state:clab-srv6-srsim-ce4:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-ce4:e1-1-c1-1:clab-srv6-srsim-srv6-gw1:e1-1-c5-1:
+    dataRef: clab-srv6-srsim-ce4:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-ce4:e1-1-c2-1:clab-srv6-srsim-srv6-gw2:e1-1-c5-1:
+    dataRef: oper-state:clab-srv6-srsim-ce4:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-ce4:e1-1-c2-1:clab-srv6-srsim-srv6-gw2:e1-1-c5-1:
+    dataRef: clab-srv6-srsim-ce4:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-ce4:e1-1-c5-1:clab-srv6-srsim-client-4:eth1:
+    dataRef: oper-state:clab-srv6-srsim-ce4:e1-1-c5-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-ce4:e1-1-c5-1:clab-srv6-srsim-client-4:eth1:
+    dataRef: clab-srv6-srsim-ce4:e1-1-c5-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-client-1:eth1:clab-srv6-srsim-ce1:e1-1-c5-1:
+    dataRef: oper-state:clab-srv6-srsim-client-1:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-client-1:eth1:clab-srv6-srsim-ce1:e1-1-c5-1:
+    dataRef: clab-srv6-srsim-client-1:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-client-2:eth1:clab-srv6-srsim-ce2:e1-1-c5-1:
+    dataRef: oper-state:clab-srv6-srsim-client-2:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-client-2:eth1:clab-srv6-srsim-ce2:e1-1-c5-1:
+    dataRef: clab-srv6-srsim-client-2:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-client-3:eth1:clab-srv6-srsim-ce3:e1-1-c5-1:
+    dataRef: oper-state:clab-srv6-srsim-client-3:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-client-3:eth1:clab-srv6-srsim-ce3:e1-1-c5-1:
+    dataRef: clab-srv6-srsim-client-3:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srv6-srsim-client-4:eth1:clab-srv6-srsim-ce4:e1-1-c5-1:
+    dataRef: oper-state:clab-srv6-srsim-client-4:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srv6-srsim-client-4:eth1:clab-srv6-srsim-ce4:e1-1-c5-1:
+    dataRef: clab-srv6-srsim-client-4:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
