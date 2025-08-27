@@ -1,0 +1,100 @@
+---
+anchors:
+  thresholds-operstate: &thresholds-operstate
+  - color: red
+    level: 0
+  - color: green
+    level: 1
+  thresholds-traffic: &thresholds-traffic
+  - color: gray
+    level: 0
+  - color: green
+    level: 199999
+  - color: yellow
+    level: 500000
+  - color: orange
+    level: 1000000
+  - color: red
+    level: 5000000
+  label-config: &label-config
+    separator: replace
+    units: bps
+    decimalPoints: 1
+    valueMappings:
+    - valueMax: 199999
+      text: ​
+    - valueMin: 200000
+cellIdPreamble: cell-
+cells:
+  clab-srl-sxr-1:e1-1:clab-srl-sr-2:e1-1-c1-1:
+    dataRef: oper-state:clab-srl-sxr-1:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srl-sxr-1:e1-1:clab-srl-sr-2:e1-1-c1-1:
+    dataRef: clab-srl-sxr-1:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srl-sxr-1:e1-2:clab-srl-sr-2:e1-1-c2-1:
+    dataRef: oper-state:clab-srl-sxr-1:e1-2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srl-sxr-1:e1-2:clab-srl-sr-2:e1-1-c2-1:
+    dataRef: clab-srl-sxr-1:e1-2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srl-sxr-1:e1-3:clab-srl-client-1:eth1:
+    dataRef: oper-state:clab-srl-sxr-1:e1-3
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srl-sxr-1:e1-3:clab-srl-client-1:eth1:
+    dataRef: clab-srl-sxr-1:e1-3:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srl-sr-2:e1-1-c1-1:clab-srl-sxr-1:e1-1:
+    dataRef: oper-state:clab-srl-sr-2:e1-1-c1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srl-sr-2:e1-1-c1-1:clab-srl-sxr-1:e1-1:
+    dataRef: clab-srl-sr-2:e1-1-c1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srl-sr-2:e1-1-c2-1:clab-srl-sxr-1:e1-2:
+    dataRef: oper-state:clab-srl-sr-2:e1-1-c2-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srl-sr-2:e1-1-c2-1:clab-srl-sxr-1:e1-2:
+    dataRef: clab-srl-sr-2:e1-1-c2-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srl-sr-2:e1-1-c3-1:clab-srl-client-2:eth1:
+    dataRef: oper-state:clab-srl-sr-2:e1-1-c3-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srl-sr-2:e1-1-c3-1:clab-srl-client-2:eth1:
+    dataRef: clab-srl-sr-2:e1-1-c3-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srl-client-1:eth1:clab-srl-sxr-1:e1-3:
+    dataRef: oper-state:clab-srl-client-1:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srl-client-1:eth1:clab-srl-sxr-1:e1-3:
+    dataRef: clab-srl-client-1:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  clab-srl-client-2:eth1:clab-srl-sr-2:e1-1-c3-1:
+    dataRef: oper-state:clab-srl-client-2:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:clab-srl-client-2:eth1:clab-srl-sr-2:e1-1-c3-1:
+    dataRef: clab-srl-client-2:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
