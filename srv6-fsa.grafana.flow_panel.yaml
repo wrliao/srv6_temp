@@ -224,11 +224,11 @@ cells:
     label: *label-config
     strokeColor:
       thresholds: *thresholds-traffic
-  clab-srv6-fsa-core6:eth2:clab-srv6-fsa-mpls-pe2:e-1/1:
+  clab-srv6-fsa-core6:eth2:clab-srv6-fsa-mpls-pe2:eth1:
     dataRef: oper-state:clab-srv6-fsa-core6:eth2
     fillColor:
       thresholds: *thresholds-operstate
-  link_id:clab-srv6-fsa-core6:eth2:clab-srv6-fsa-mpls-pe2:e-1/1:
+  link_id:clab-srv6-fsa-core6:eth2:clab-srv6-fsa-mpls-pe2:eth1:
     dataRef: clab-srv6-fsa-core6:eth2:out
     label: *label-config
     strokeColor:
@@ -377,11 +377,11 @@ cells:
     label: *label-config
     strokeColor:
       thresholds: *thresholds-traffic
-  clab-srv6-fsa-mpls-pe1:eth2:clab-srv6-fsa-mpls-pe2:e-1/2:
+  clab-srv6-fsa-mpls-pe1:eth2:clab-srv6-fsa-mpls-pe2:eth2:
     dataRef: oper-state:clab-srv6-fsa-mpls-pe1:eth2
     fillColor:
       thresholds: *thresholds-operstate
-  link_id:clab-srv6-fsa-mpls-pe1:eth2:clab-srv6-fsa-mpls-pe2:e-1/2:
+  link_id:clab-srv6-fsa-mpls-pe1:eth2:clab-srv6-fsa-mpls-pe2:eth2:
     dataRef: clab-srv6-fsa-mpls-pe1:eth2:out
     label: *label-config
     strokeColor:
@@ -395,30 +395,30 @@ cells:
     label: *label-config
     strokeColor:
       thresholds: *thresholds-traffic
-  clab-srv6-fsa-mpls-pe2:e-1/1:clab-srv6-fsa-core6:eth2:
-    dataRef: oper-state:clab-srv6-fsa-mpls-pe2:e-1/1
+  clab-srv6-fsa-mpls-pe2:eth1:clab-srv6-fsa-core6:eth2:
+    dataRef: oper-state:clab-srv6-fsa-mpls-pe2:eth1
     fillColor:
       thresholds: *thresholds-operstate
-  link_id:clab-srv6-fsa-mpls-pe2:e-1/1:clab-srv6-fsa-core6:eth2:
-    dataRef: clab-srv6-fsa-mpls-pe2:e-1/1:out
+  link_id:clab-srv6-fsa-mpls-pe2:eth1:clab-srv6-fsa-core6:eth2:
+    dataRef: clab-srv6-fsa-mpls-pe2:eth1:out
     label: *label-config
     strokeColor:
       thresholds: *thresholds-traffic
-  clab-srv6-fsa-mpls-pe2:e-1/2:clab-srv6-fsa-mpls-pe1:eth2:
-    dataRef: oper-state:clab-srv6-fsa-mpls-pe2:e-1/2
+  clab-srv6-fsa-mpls-pe2:eth2:clab-srv6-fsa-mpls-pe1:eth2:
+    dataRef: oper-state:clab-srv6-fsa-mpls-pe2:eth2
     fillColor:
       thresholds: *thresholds-operstate
-  link_id:clab-srv6-fsa-mpls-pe2:e-1/2:clab-srv6-fsa-mpls-pe1:eth2:
-    dataRef: clab-srv6-fsa-mpls-pe2:e-1/2:out
+  link_id:clab-srv6-fsa-mpls-pe2:eth2:clab-srv6-fsa-mpls-pe1:eth2:
+    dataRef: clab-srv6-fsa-mpls-pe2:eth2:out
     label: *label-config
     strokeColor:
       thresholds: *thresholds-traffic
-  clab-srv6-fsa-mpls-pe2:e-1/3:clab-srv6-fsa-ce2:eth2:
-    dataRef: oper-state:clab-srv6-fsa-mpls-pe2:e-1/3
+  clab-srv6-fsa-mpls-pe2:eth3:clab-srv6-fsa-ce2:eth2:
+    dataRef: oper-state:clab-srv6-fsa-mpls-pe2:eth3
     fillColor:
       thresholds: *thresholds-operstate
-  link_id:clab-srv6-fsa-mpls-pe2:e-1/3:clab-srv6-fsa-ce2:eth2:
-    dataRef: clab-srv6-fsa-mpls-pe2:e-1/3:out
+  link_id:clab-srv6-fsa-mpls-pe2:eth3:clab-srv6-fsa-ce2:eth2:
+    dataRef: clab-srv6-fsa-mpls-pe2:eth3:out
     label: *label-config
     strokeColor:
       thresholds: *thresholds-traffic
@@ -458,11 +458,11 @@ cells:
     label: *label-config
     strokeColor:
       thresholds: *thresholds-traffic
-  clab-srv6-fsa-ce2:eth2:clab-srv6-fsa-mpls-pe2:e-1/3:
+  clab-srv6-fsa-ce2:eth2:clab-srv6-fsa-mpls-pe2:eth3:
     dataRef: oper-state:clab-srv6-fsa-ce2:eth2
     fillColor:
       thresholds: *thresholds-operstate
-  link_id:clab-srv6-fsa-ce2:eth2:clab-srv6-fsa-mpls-pe2:e-1/3:
+  link_id:clab-srv6-fsa-ce2:eth2:clab-srv6-fsa-mpls-pe2:eth3:
     dataRef: clab-srv6-fsa-ce2:eth2:out
     label: *label-config
     strokeColor:
