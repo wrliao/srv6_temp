@@ -1,0 +1,1315 @@
+---
+anchors:
+  thresholds-operstate: &thresholds-operstate
+    - { color: "red", level: 0 }
+    - { color: "green", level: 1 }
+  thresholds-traffic: &thresholds-traffic
+    - { color: "gray", level: 0 }
+    - { color: "green", level: 199999 }
+    - { color: "yellow", level: 500000 }
+    - { color: "orange", level: 1000000 }
+    - { color: "red", level: 5000000 }
+  thresholds-rate-label: &thresholds-rate-label
+    - { color: "white", level: 0 }
+  label-config: &label-config
+    separator: "replace"
+    units: "bps"
+    decimalPoints: 1
+    valueMappings:
+      - { valueMax: 199999, text: "\u200B" }
+cellIdPreamble: "cell-"
+tagConfig:
+  legend: ["hide-rates"]
+  lowlightAlphaFactor: 0
+  highlightRgbFactor: 1
+cells:
+  "core1:e1-1-c1-1":
+    dataRef: "oper-state:core1:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "core2:e1-1-c1-1":
+    dataRef: "oper-state:core2:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core1:e1-1-c1-1:core2:e1-1-c1-1":
+    dataRef: "core1:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core1:e1-1-c1-1:core2:e1-1-c1-1:label":
+    dataRef: "core1:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:core2:e1-1-c1-1:core1:e1-1-c1-1":
+    dataRef: "core2:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core2:e1-1-c1-1:core1:e1-1-c1-1:label":
+    dataRef: "core2:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core1:e1-1-c2-1":
+    dataRef: "oper-state:core1:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "core3:e1-1-c1-1":
+    dataRef: "oper-state:core3:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core1:e1-1-c2-1:core3:e1-1-c1-1":
+    dataRef: "core1:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core1:e1-1-c2-1:core3:e1-1-c1-1:label":
+    dataRef: "core1:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:core3:e1-1-c1-1:core1:e1-1-c2-1":
+    dataRef: "core3:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core3:e1-1-c1-1:core1:e1-1-c2-1:label":
+    dataRef: "core3:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core1:e1-1-c3-1":
+    dataRef: "oper-state:core1:e1-1-c3-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "core5:e1-1-c4-1":
+    dataRef: "oper-state:core5:e1-1-c4-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core1:e1-1-c3-1:core5:e1-1-c4-1":
+    dataRef: "core1:e1-1-c3-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core1:e1-1-c3-1:core5:e1-1-c4-1:label":
+    dataRef: "core1:e1-1-c3-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:core5:e1-1-c4-1:core1:e1-1-c3-1":
+    dataRef: "core5:e1-1-c4-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core5:e1-1-c4-1:core1:e1-1-c3-1:label":
+    dataRef: "core5:e1-1-c4-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core1:e1-1-c4-1":
+    dataRef: "oper-state:core1:e1-1-c4-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "srv6-gw1:e1-1-c1-1":
+    dataRef: "oper-state:srv6-gw1:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core1:e1-1-c4-1:srv6-gw1:e1-1-c1-1":
+    dataRef: "core1:e1-1-c4-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core1:e1-1-c4-1:srv6-gw1:e1-1-c1-1:label":
+    dataRef: "core1:e1-1-c4-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:srv6-gw1:e1-1-c1-1:core1:e1-1-c4-1":
+    dataRef: "srv6-gw1:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-gw1:e1-1-c1-1:core1:e1-1-c4-1:label":
+    dataRef: "srv6-gw1:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core1:e1-1-c5-1":
+    dataRef: "oper-state:core1:e1-1-c5-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "srv6-gw2:e1-1-c1-1":
+    dataRef: "oper-state:srv6-gw2:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core1:e1-1-c5-1:srv6-gw2:e1-1-c1-1":
+    dataRef: "core1:e1-1-c5-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core1:e1-1-c5-1:srv6-gw2:e1-1-c1-1:label":
+    dataRef: "core1:e1-1-c5-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:srv6-gw2:e1-1-c1-1:core1:e1-1-c5-1":
+    dataRef: "srv6-gw2:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-gw2:e1-1-c1-1:core1:e1-1-c5-1:label":
+    dataRef: "srv6-gw2:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core2:e1-1-c2-1":
+    dataRef: "oper-state:core2:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "core3:e1-1-c2-1":
+    dataRef: "oper-state:core3:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core2:e1-1-c2-1:core3:e1-1-c2-1":
+    dataRef: "core2:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core2:e1-1-c2-1:core3:e1-1-c2-1:label":
+    dataRef: "core2:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:core3:e1-1-c2-1:core2:e1-1-c2-1":
+    dataRef: "core3:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core3:e1-1-c2-1:core2:e1-1-c2-1:label":
+    dataRef: "core3:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core2:e1-1-c3-1":
+    dataRef: "oper-state:core2:e1-1-c3-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "core6:e1-1-c4-1":
+    dataRef: "oper-state:core6:e1-1-c4-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core2:e1-1-c3-1:core6:e1-1-c4-1":
+    dataRef: "core2:e1-1-c3-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core2:e1-1-c3-1:core6:e1-1-c4-1:label":
+    dataRef: "core2:e1-1-c3-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:core6:e1-1-c4-1:core2:e1-1-c3-1":
+    dataRef: "core6:e1-1-c4-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core6:e1-1-c4-1:core2:e1-1-c3-1:label":
+    dataRef: "core6:e1-1-c4-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core2:e1-1-c4-1":
+    dataRef: "oper-state:core2:e1-1-c4-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "srv6-gw1:e1-1-c2-1":
+    dataRef: "oper-state:srv6-gw1:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core2:e1-1-c4-1:srv6-gw1:e1-1-c2-1":
+    dataRef: "core2:e1-1-c4-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core2:e1-1-c4-1:srv6-gw1:e1-1-c2-1:label":
+    dataRef: "core2:e1-1-c4-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:srv6-gw1:e1-1-c2-1:core2:e1-1-c4-1":
+    dataRef: "srv6-gw1:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-gw1:e1-1-c2-1:core2:e1-1-c4-1:label":
+    dataRef: "srv6-gw1:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core2:e1-1-c5-1":
+    dataRef: "oper-state:core2:e1-1-c5-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "srv6-gw2:e1-1-c2-1":
+    dataRef: "oper-state:srv6-gw2:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core2:e1-1-c5-1:srv6-gw2:e1-1-c2-1":
+    dataRef: "core2:e1-1-c5-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core2:e1-1-c5-1:srv6-gw2:e1-1-c2-1:label":
+    dataRef: "core2:e1-1-c5-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:srv6-gw2:e1-1-c2-1:core2:e1-1-c5-1":
+    dataRef: "srv6-gw2:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-gw2:e1-1-c2-1:core2:e1-1-c5-1:label":
+    dataRef: "srv6-gw2:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core5:e1-1-c1-1":
+    dataRef: "oper-state:core5:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "srv6-pe1:e1-1-c1-1":
+    dataRef: "oper-state:srv6-pe1:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core5:e1-1-c1-1:srv6-pe1:e1-1-c1-1":
+    dataRef: "core5:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core5:e1-1-c1-1:srv6-pe1:e1-1-c1-1:label":
+    dataRef: "core5:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:srv6-pe1:e1-1-c1-1:core5:e1-1-c1-1":
+    dataRef: "srv6-pe1:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-pe1:e1-1-c1-1:core5:e1-1-c1-1:label":
+    dataRef: "srv6-pe1:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core5:e1-1-c2-1":
+    dataRef: "oper-state:core5:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "mpls-pe1:e1-1-c1-1":
+    dataRef: "oper-state:mpls-pe1:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core5:e1-1-c2-1:mpls-pe1:e1-1-c1-1":
+    dataRef: "core5:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core5:e1-1-c2-1:mpls-pe1:e1-1-c1-1:label":
+    dataRef: "core5:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:mpls-pe1:e1-1-c1-1:core5:e1-1-c2-1":
+    dataRef: "mpls-pe1:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:mpls-pe1:e1-1-c1-1:core5:e1-1-c2-1:label":
+    dataRef: "mpls-pe1:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core5:e1-1-c3-1":
+    dataRef: "oper-state:core5:e1-1-c3-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "core3:e1-1-c5-1":
+    dataRef: "oper-state:core3:e1-1-c5-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core5:e1-1-c3-1:core3:e1-1-c5-1":
+    dataRef: "core5:e1-1-c3-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core5:e1-1-c3-1:core3:e1-1-c5-1:label":
+    dataRef: "core5:e1-1-c3-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:core3:e1-1-c5-1:core5:e1-1-c3-1":
+    dataRef: "core3:e1-1-c5-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core3:e1-1-c5-1:core5:e1-1-c3-1:label":
+    dataRef: "core3:e1-1-c5-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core5:e1-2-c1-1":
+    dataRef: "oper-state:core5:e1-2-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "srv6-sxr1:e1-1":
+    dataRef: "oper-state:srv6-sxr1:e1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core5:e1-2-c1-1:srv6-sxr1:e1-1":
+    dataRef: "core5:e1-2-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core5:e1-2-c1-1:srv6-sxr1:e1-1:label":
+    dataRef: "core5:e1-2-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:srv6-sxr1:e1-1:core5:e1-2-c1-1":
+    dataRef: "srv6-sxr1:e1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-sxr1:e1-1:core5:e1-2-c1-1:label":
+    dataRef: "srv6-sxr1:e1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core5:e1-1-c5-1":
+    dataRef: "oper-state:core5:e1-1-c5-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "core6:e1-1-c5-1":
+    dataRef: "oper-state:core6:e1-1-c5-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core5:e1-1-c5-1:core6:e1-1-c5-1":
+    dataRef: "core5:e1-1-c5-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core5:e1-1-c5-1:core6:e1-1-c5-1:label":
+    dataRef: "core5:e1-1-c5-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:core6:e1-1-c5-1:core5:e1-1-c5-1":
+    dataRef: "core6:e1-1-c5-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core6:e1-1-c5-1:core5:e1-1-c5-1:label":
+    dataRef: "core6:e1-1-c5-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core6:e1-1-c1-1":
+    dataRef: "oper-state:core6:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "srv6-pe2:e1-1-c1-1":
+    dataRef: "oper-state:srv6-pe2:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core6:e1-1-c1-1:srv6-pe2:e1-1-c1-1":
+    dataRef: "core6:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core6:e1-1-c1-1:srv6-pe2:e1-1-c1-1:label":
+    dataRef: "core6:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:srv6-pe2:e1-1-c1-1:core6:e1-1-c1-1":
+    dataRef: "srv6-pe2:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-pe2:e1-1-c1-1:core6:e1-1-c1-1:label":
+    dataRef: "srv6-pe2:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core6:e1-1-c2-1":
+    dataRef: "oper-state:core6:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "mpls-pe2:e1-1-c1-1":
+    dataRef: "oper-state:mpls-pe2:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core6:e1-1-c2-1:mpls-pe2:e1-1-c1-1":
+    dataRef: "core6:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core6:e1-1-c2-1:mpls-pe2:e1-1-c1-1:label":
+    dataRef: "core6:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:mpls-pe2:e1-1-c1-1:core6:e1-1-c2-1":
+    dataRef: "mpls-pe2:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:mpls-pe2:e1-1-c1-1:core6:e1-1-c2-1:label":
+    dataRef: "mpls-pe2:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core6:e1-2-c1-1":
+    dataRef: "oper-state:core6:e1-2-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "srv6-sxr2:e1-1":
+    dataRef: "oper-state:srv6-sxr2:e1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core6:e1-2-c1-1:srv6-sxr2:e1-1":
+    dataRef: "core6:e1-2-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core6:e1-2-c1-1:srv6-sxr2:e1-1:label":
+    dataRef: "core6:e1-2-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:srv6-sxr2:e1-1:core6:e1-2-c1-1":
+    dataRef: "srv6-sxr2:e1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-sxr2:e1-1:core6:e1-2-c1-1:label":
+    dataRef: "srv6-sxr2:e1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core6:e1-1-c3-1":
+    dataRef: "oper-state:core6:e1-1-c3-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "core3:e1-1-c6-1":
+    dataRef: "oper-state:core3:e1-1-c6-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core6:e1-1-c3-1:core3:e1-1-c6-1":
+    dataRef: "core6:e1-1-c3-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core6:e1-1-c3-1:core3:e1-1-c6-1:label":
+    dataRef: "core6:e1-1-c3-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:core3:e1-1-c6-1:core6:e1-1-c3-1":
+    dataRef: "core3:e1-1-c6-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core3:e1-1-c6-1:core6:e1-1-c3-1:label":
+    dataRef: "core3:e1-1-c6-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "srv6-pe1:e1-1-c2-1":
+    dataRef: "oper-state:srv6-pe1:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "srv6-pe2:e1-1-c2-1":
+    dataRef: "oper-state:srv6-pe2:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:srv6-pe1:e1-1-c2-1:srv6-pe2:e1-1-c2-1":
+    dataRef: "srv6-pe1:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-pe1:e1-1-c2-1:srv6-pe2:e1-1-c2-1:label":
+    dataRef: "srv6-pe1:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:srv6-pe2:e1-1-c2-1:srv6-pe1:e1-1-c2-1":
+    dataRef: "srv6-pe2:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-pe2:e1-1-c2-1:srv6-pe1:e1-1-c2-1:label":
+    dataRef: "srv6-pe2:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "srv6-pe1:e1-1-c3-1":
+    dataRef: "oper-state:srv6-pe1:e1-1-c3-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce1:e1-1-c1-1":
+    dataRef: "oper-state:ce1:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:srv6-pe1:e1-1-c3-1:ce1:e1-1-c1-1":
+    dataRef: "srv6-pe1:e1-1-c3-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-pe1:e1-1-c3-1:ce1:e1-1-c1-1:label":
+    dataRef: "srv6-pe1:e1-1-c3-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce1:e1-1-c1-1:srv6-pe1:e1-1-c3-1":
+    dataRef: "ce1:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce1:e1-1-c1-1:srv6-pe1:e1-1-c3-1:label":
+    dataRef: "ce1:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "srv6-pe2:e1-1-c3-1":
+    dataRef: "oper-state:srv6-pe2:e1-1-c3-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce1:e1-1-c2-1":
+    dataRef: "oper-state:ce1:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:srv6-pe2:e1-1-c3-1:ce1:e1-1-c2-1":
+    dataRef: "srv6-pe2:e1-1-c3-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-pe2:e1-1-c3-1:ce1:e1-1-c2-1:label":
+    dataRef: "srv6-pe2:e1-1-c3-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce1:e1-1-c2-1:srv6-pe2:e1-1-c3-1":
+    dataRef: "ce1:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce1:e1-1-c2-1:srv6-pe2:e1-1-c3-1:label":
+    dataRef: "ce1:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "srv6-sxr1:e1-2":
+    dataRef: "oper-state:srv6-sxr1:e1-2"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "srv6-sxr2:e1-2":
+    dataRef: "oper-state:srv6-sxr2:e1-2"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:srv6-sxr1:e1-2:srv6-sxr2:e1-2":
+    dataRef: "srv6-sxr1:e1-2:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-sxr1:e1-2:srv6-sxr2:e1-2:label":
+    dataRef: "srv6-sxr1:e1-2:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:srv6-sxr2:e1-2:srv6-sxr1:e1-2":
+    dataRef: "srv6-sxr2:e1-2:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-sxr2:e1-2:srv6-sxr1:e1-2:label":
+    dataRef: "srv6-sxr2:e1-2:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "srv6-sxr1:e1-3":
+    dataRef: "oper-state:srv6-sxr1:e1-3"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce2:e1-1-c1-1":
+    dataRef: "oper-state:ce2:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:srv6-sxr1:e1-3:ce2:e1-1-c1-1":
+    dataRef: "srv6-sxr1:e1-3:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-sxr1:e1-3:ce2:e1-1-c1-1:label":
+    dataRef: "srv6-sxr1:e1-3:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce2:e1-1-c1-1:srv6-sxr1:e1-3":
+    dataRef: "ce2:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce2:e1-1-c1-1:srv6-sxr1:e1-3:label":
+    dataRef: "ce2:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "srv6-sxr2:e1-3":
+    dataRef: "oper-state:srv6-sxr2:e1-3"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce2:e1-1-c2-1":
+    dataRef: "oper-state:ce2:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:srv6-sxr2:e1-3:ce2:e1-1-c2-1":
+    dataRef: "srv6-sxr2:e1-3:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-sxr2:e1-3:ce2:e1-1-c2-1:label":
+    dataRef: "srv6-sxr2:e1-3:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce2:e1-1-c2-1:srv6-sxr2:e1-3":
+    dataRef: "ce2:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce2:e1-1-c2-1:srv6-sxr2:e1-3:label":
+    dataRef: "ce2:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "srv6-sxr1:e1-4":
+    dataRef: "oper-state:srv6-sxr1:e1-4"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "srv6-ixrx3b:e1-1":
+    dataRef: "oper-state:srv6-ixrx3b:e1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:srv6-sxr1:e1-4:srv6-ixrx3b:e1-1":
+    dataRef: "srv6-sxr1:e1-4:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-sxr1:e1-4:srv6-ixrx3b:e1-1:label":
+    dataRef: "srv6-sxr1:e1-4:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:srv6-ixrx3b:e1-1:srv6-sxr1:e1-4":
+    dataRef: "srv6-ixrx3b:e1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-ixrx3b:e1-1:srv6-sxr1:e1-4:label":
+    dataRef: "srv6-ixrx3b:e1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "srv6-sxr2:e1-4":
+    dataRef: "oper-state:srv6-sxr2:e1-4"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "srv6-ixrx3b:e1-2":
+    dataRef: "oper-state:srv6-ixrx3b:e1-2"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:srv6-sxr2:e1-4:srv6-ixrx3b:e1-2":
+    dataRef: "srv6-sxr2:e1-4:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-sxr2:e1-4:srv6-ixrx3b:e1-2:label":
+    dataRef: "srv6-sxr2:e1-4:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:srv6-ixrx3b:e1-2:srv6-sxr2:e1-4":
+    dataRef: "srv6-ixrx3b:e1-2:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-ixrx3b:e1-2:srv6-sxr2:e1-4:label":
+    dataRef: "srv6-ixrx3b:e1-2:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "mpls-pe1:e1-1-c2-1":
+    dataRef: "oper-state:mpls-pe1:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "mpls-pe2:e1-1-c2-1":
+    dataRef: "oper-state:mpls-pe2:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:mpls-pe1:e1-1-c2-1:mpls-pe2:e1-1-c2-1":
+    dataRef: "mpls-pe1:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:mpls-pe1:e1-1-c2-1:mpls-pe2:e1-1-c2-1:label":
+    dataRef: "mpls-pe1:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:mpls-pe2:e1-1-c2-1:mpls-pe1:e1-1-c2-1":
+    dataRef: "mpls-pe2:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:mpls-pe2:e1-1-c2-1:mpls-pe1:e1-1-c2-1:label":
+    dataRef: "mpls-pe2:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "mpls-pe1:e1-1-c3-1":
+    dataRef: "oper-state:mpls-pe1:e1-1-c3-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce2:e1-1-c3-1":
+    dataRef: "oper-state:ce2:e1-1-c3-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:mpls-pe1:e1-1-c3-1:ce2:e1-1-c3-1":
+    dataRef: "mpls-pe1:e1-1-c3-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:mpls-pe1:e1-1-c3-1:ce2:e1-1-c3-1:label":
+    dataRef: "mpls-pe1:e1-1-c3-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce2:e1-1-c3-1:mpls-pe1:e1-1-c3-1":
+    dataRef: "ce2:e1-1-c3-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce2:e1-1-c3-1:mpls-pe1:e1-1-c3-1:label":
+    dataRef: "ce2:e1-1-c3-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "mpls-pe2:e1-1-c3-1":
+    dataRef: "oper-state:mpls-pe2:e1-1-c3-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce2:e1-1-c4-1":
+    dataRef: "oper-state:ce2:e1-1-c4-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:mpls-pe2:e1-1-c3-1:ce2:e1-1-c4-1":
+    dataRef: "mpls-pe2:e1-1-c3-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:mpls-pe2:e1-1-c3-1:ce2:e1-1-c4-1:label":
+    dataRef: "mpls-pe2:e1-1-c3-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce2:e1-1-c4-1:mpls-pe2:e1-1-c3-1":
+    dataRef: "ce2:e1-1-c4-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce2:e1-1-c4-1:mpls-pe2:e1-1-c3-1:label":
+    dataRef: "ce2:e1-1-c4-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "srv6-gw1:e1-1-c4-1":
+    dataRef: "oper-state:srv6-gw1:e1-1-c4-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce3:e1-1-c1-1":
+    dataRef: "oper-state:ce3:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:srv6-gw1:e1-1-c4-1:ce3:e1-1-c1-1":
+    dataRef: "srv6-gw1:e1-1-c4-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-gw1:e1-1-c4-1:ce3:e1-1-c1-1:label":
+    dataRef: "srv6-gw1:e1-1-c4-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce3:e1-1-c1-1:srv6-gw1:e1-1-c4-1":
+    dataRef: "ce3:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce3:e1-1-c1-1:srv6-gw1:e1-1-c4-1:label":
+    dataRef: "ce3:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "srv6-gw1:e1-1-c5-1":
+    dataRef: "oper-state:srv6-gw1:e1-1-c5-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce4:e1-1-c1-1":
+    dataRef: "oper-state:ce4:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:srv6-gw1:e1-1-c5-1:ce4:e1-1-c1-1":
+    dataRef: "srv6-gw1:e1-1-c5-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-gw1:e1-1-c5-1:ce4:e1-1-c1-1:label":
+    dataRef: "srv6-gw1:e1-1-c5-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce4:e1-1-c1-1:srv6-gw1:e1-1-c5-1":
+    dataRef: "ce4:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce4:e1-1-c1-1:srv6-gw1:e1-1-c5-1:label":
+    dataRef: "ce4:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "srv6-gw2:e1-1-c4-1":
+    dataRef: "oper-state:srv6-gw2:e1-1-c4-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce3:e1-1-c2-1":
+    dataRef: "oper-state:ce3:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:srv6-gw2:e1-1-c4-1:ce3:e1-1-c2-1":
+    dataRef: "srv6-gw2:e1-1-c4-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-gw2:e1-1-c4-1:ce3:e1-1-c2-1:label":
+    dataRef: "srv6-gw2:e1-1-c4-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce3:e1-1-c2-1:srv6-gw2:e1-1-c4-1":
+    dataRef: "ce3:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce3:e1-1-c2-1:srv6-gw2:e1-1-c4-1:label":
+    dataRef: "ce3:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "srv6-gw2:e1-1-c5-1":
+    dataRef: "oper-state:srv6-gw2:e1-1-c5-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce4:e1-1-c2-1":
+    dataRef: "oper-state:ce4:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:srv6-gw2:e1-1-c5-1:ce4:e1-1-c2-1":
+    dataRef: "srv6-gw2:e1-1-c5-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:srv6-gw2:e1-1-c5-1:ce4:e1-1-c2-1:label":
+    dataRef: "srv6-gw2:e1-1-c5-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce4:e1-1-c2-1:srv6-gw2:e1-1-c5-1":
+    dataRef: "ce4:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce4:e1-1-c2-1:srv6-gw2:e1-1-c5-1:label":
+    dataRef: "ce4:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "client-1:eth1":
+    dataRef: "oper-state:client-1:eth1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce1:e1-1-c5-1":
+    dataRef: "oper-state:ce1:e1-1-c5-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:client-1:eth1:ce1:e1-1-c5-1":
+    dataRef: "client-1:eth1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:client-1:eth1:ce1:e1-1-c5-1:label":
+    dataRef: "client-1:eth1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce1:e1-1-c5-1:client-1:eth1":
+    dataRef: "ce1:e1-1-c5-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce1:e1-1-c5-1:client-1:eth1:label":
+    dataRef: "ce1:e1-1-c5-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "client-2:eth1":
+    dataRef: "oper-state:client-2:eth1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce2:e1-1-c5-1":
+    dataRef: "oper-state:ce2:e1-1-c5-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:client-2:eth1:ce2:e1-1-c5-1":
+    dataRef: "client-2:eth1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:client-2:eth1:ce2:e1-1-c5-1:label":
+    dataRef: "client-2:eth1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce2:e1-1-c5-1:client-2:eth1":
+    dataRef: "ce2:e1-1-c5-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce2:e1-1-c5-1:client-2:eth1:label":
+    dataRef: "ce2:e1-1-c5-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "client-3:eth1":
+    dataRef: "oper-state:client-3:eth1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce3:e1-1-c5-1":
+    dataRef: "oper-state:ce3:e1-1-c5-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:client-3:eth1:ce3:e1-1-c5-1":
+    dataRef: "client-3:eth1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:client-3:eth1:ce3:e1-1-c5-1:label":
+    dataRef: "client-3:eth1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce3:e1-1-c5-1:client-3:eth1":
+    dataRef: "ce3:e1-1-c5-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce3:e1-1-c5-1:client-3:eth1:label":
+    dataRef: "ce3:e1-1-c5-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "client-4:eth1":
+    dataRef: "oper-state:client-4:eth1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce4:e1-1-c5-1":
+    dataRef: "oper-state:ce4:e1-1-c5-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:client-4:eth1:ce4:e1-1-c5-1":
+    dataRef: "client-4:eth1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:client-4:eth1:ce4:e1-1-c5-1:label":
+    dataRef: "client-4:eth1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce4:e1-1-c5-1:client-4:eth1":
+    dataRef: "ce4:e1-1-c5-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce4:e1-1-c5-1:client-4:eth1:label":
+    dataRef: "ce4:e1-1-c5-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "client-5:eth1":
+    dataRef: "oper-state:client-5:eth1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce5:e1-1-c5-1":
+    dataRef: "oper-state:ce5:e1-1-c5-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:client-5:eth1:ce5:e1-1-c5-1":
+    dataRef: "client-5:eth1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:client-5:eth1:ce5:e1-1-c5-1:label":
+    dataRef: "client-5:eth1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce5:e1-1-c5-1:client-5:eth1":
+    dataRef: "ce5:e1-1-c5-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce5:e1-1-c5-1:client-5:eth1:label":
+    dataRef: "ce5:e1-1-c5-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "client-6:eth1":
+    dataRef: "oper-state:client-6:eth1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce6:e1-1-c5-1":
+    dataRef: "oper-state:ce6:e1-1-c5-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:client-6:eth1:ce6:e1-1-c5-1":
+    dataRef: "client-6:eth1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:client-6:eth1:ce6:e1-1-c5-1:label":
+    dataRef: "client-6:eth1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce6:e1-1-c5-1:client-6:eth1":
+    dataRef: "ce6:e1-1-c5-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce6:e1-1-c5-1:client-6:eth1:label":
+    dataRef: "ce6:e1-1-c5-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core5:e1-1-c6-1":
+    dataRef: "oper-state:core5:e1-1-c6-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce5:e1-1-c1-1":
+    dataRef: "oper-state:ce5:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core5:e1-1-c6-1:ce5:e1-1-c1-1":
+    dataRef: "core5:e1-1-c6-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core5:e1-1-c6-1:ce5:e1-1-c1-1:label":
+    dataRef: "core5:e1-1-c6-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce5:e1-1-c1-1:core5:e1-1-c6-1":
+    dataRef: "ce5:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce5:e1-1-c1-1:core5:e1-1-c6-1:label":
+    dataRef: "ce5:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core6:e1-1-c6-1":
+    dataRef: "oper-state:core6:e1-1-c6-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce5:e1-1-c2-1":
+    dataRef: "oper-state:ce5:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core6:e1-1-c6-1:ce5:e1-1-c2-1":
+    dataRef: "core6:e1-1-c6-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core6:e1-1-c6-1:ce5:e1-1-c2-1:label":
+    dataRef: "core6:e1-1-c6-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce5:e1-1-c2-1:core6:e1-1-c6-1":
+    dataRef: "ce5:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce5:e1-1-c2-1:core6:e1-1-c6-1:label":
+    dataRef: "ce5:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core1:e1-1-c6-1":
+    dataRef: "oper-state:core1:e1-1-c6-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce6:e1-1-c1-1":
+    dataRef: "oper-state:ce6:e1-1-c1-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core1:e1-1-c6-1:ce6:e1-1-c1-1":
+    dataRef: "core1:e1-1-c6-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core1:e1-1-c6-1:ce6:e1-1-c1-1:label":
+    dataRef: "core1:e1-1-c6-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce6:e1-1-c1-1:core1:e1-1-c6-1":
+    dataRef: "ce6:e1-1-c1-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce6:e1-1-c1-1:core1:e1-1-c6-1:label":
+    dataRef: "ce6:e1-1-c1-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "core2:e1-1-c6-1":
+    dataRef: "oper-state:core2:e1-1-c6-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "ce6:e1-1-c2-1":
+    dataRef: "oper-state:ce6:e1-1-c2-1"
+    fillColor:
+      thresholds: *thresholds-operstate
+    tags: ["hide-rates"]
+  "link_id:core2:e1-1-c6-1:ce6:e1-1-c2-1":
+    dataRef: "core2:e1-1-c6-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:core2:e1-1-c6-1:ce6:e1-1-c2-1:label":
+    dataRef: "core2:e1-1-c6-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
+  "link_id:ce6:e1-1-c2-1:core2:e1-1-c6-1":
+    dataRef: "ce6:e1-1-c2-1:out"
+    strokeColor:
+      thresholds: *thresholds-traffic
+    tags: ["hide-rates"]
+  "link_id:ce6:e1-1-c2-1:core2:e1-1-c6-1:label":
+    dataRef: "ce6:e1-1-c2-1:out"
+    label: *label-config
+    labelColor:
+      thresholds: *thresholds-rate-label
