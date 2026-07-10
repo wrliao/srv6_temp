@@ -23,423 +23,423 @@ tagConfig:
   lowlightAlphaFactor: 0
   highlightRgbFactor: 1
 cells:
-  "core1:e1-1-c1-1":
-    dataRef: "oper-state:core1:e1-1-c1-1"
+  "clab-srv6-srsim-core1:e1-1-c1-1":
+    dataRef: "oper-state:clab-srv6-srsim-core1:e1-1-c1-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "core2:e1-1-c1-1":
-    dataRef: "oper-state:core2:e1-1-c1-1"
+  "core2:clab-srv6-srsim-e1-1-c1-1":
+    dataRef: "oper-state:clab-srv6-srsim-core2:e1-1-c1-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "link_id:core1:e1-1-c1-1:core2:e1-1-c1-1":
-    dataRef: "core1:e1-1-c1-1:out"
+  "link_id:clab-srv6-srsim-core1:e1-1-c1-1:clab-srv6-srsim-core2:e1-1-c1-1":
+    dataRef: "clab-srv6-srsim-core1:e1-1-c1-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core1:e1-1-c1-1:core2:e1-1-c1-1:label":
-    dataRef: "core1:e1-1-c1-1:out"
+  "link_id:clab-srv6-srsim-core1:e1-1-c1-1:clab-srv6-srsim-core2:e1-1-c1-1:label":
+    dataRef: "clab-srv6-srsim-core1:e1-1-c1-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "link_id:core2:e1-1-c1-1:core1:e1-1-c1-1":
-    dataRef: "core2:e1-1-c1-1:out"
+  "link_id:clab-srv6-srsim-core2:e1-1-c1-1:clab-srv6-srsim-core1:e1-1-c1-1":
+    dataRef: "clab-srv6-srsim-core2:e1-1-c1-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core2:e1-1-c1-1:core1:e1-1-c1-1:label":
-    dataRef: "core2:e1-1-c1-1:out"
+  "link_id:clab-srv6-srsim-core2:e1-1-c1-1:clab-srv6-srsim-core1:e1-1-c1-1:label":
+    dataRef: "clab-srv6-srsim-core2:e1-1-c1-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "core1:e1-1-c2-1":
-    dataRef: "oper-state:core1:e1-1-c2-1"
+  "clab-srv6-srsim-core1:e1-1-c2-1":
+    dataRef: "oper-state:clab-srv6-srsim-core1:e1-1-c2-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "core3:e1-1-c1-1":
-    dataRef: "oper-state:core3:e1-1-c1-1"
+  "clab-srv6-srsim-core3:e1-1-c1-1":
+    dataRef: "oper-state:clab-srv6-srsim-core3:e1-1-c1-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "link_id:core1:e1-1-c2-1:core3:e1-1-c1-1":
-    dataRef: "core1:e1-1-c2-1:out"
+  "link_id:clab-srv6-srsim-core1:e1-1-c2-1:clab-srv6-srsim-core3:e1-1-c1-1":
+    dataRef: "clab-srv6-srsim-core1:e1-1-c2-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core1:e1-1-c2-1:core3:e1-1-c1-1:label":
-    dataRef: "core1:e1-1-c2-1:out"
+  "link_id:clab-srv6-srsim-core1:e1-1-c2-1:clab-srv6-srsim-core3:e1-1-c1-1:label":
+    dataRef: "clab-srv6-srsim-core1:e1-1-c2-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "link_id:core3:e1-1-c1-1:core1:e1-1-c2-1":
-    dataRef: "core3:e1-1-c1-1:out"
+  "link_id:clab-srv6-srsim-core3:e1-1-c1-1:clab-srv6-srsim-core1:e1-1-c2-1":
+    dataRef: "clab-srv6-srsim-core3:e1-1-c1-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core3:e1-1-c1-1:core1:e1-1-c2-1:label":
-    dataRef: "core3:e1-1-c1-1:out"
+  "link_id:clab-srv6-srsim-core3:e1-1-c1-1:clab-srv6-srsim-core1:e1-1-c2-1:label":
+    dataRef: "clab-srv6-srsim-core3:e1-1-c1-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "core1:e1-1-c3-1":
-    dataRef: "oper-state:core1:e1-1-c3-1"
+  "clab-srv6-srsim-core1:e1-1-c3-1":
+    dataRef: "oper-state:clab-srv6-srsim-core1:e1-1-c3-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "core5:e1-1-c4-1":
-    dataRef: "oper-state:core5:e1-1-c4-1"
+  "clab-srv6-srsim-core5:e1-1-c4-1":
+    dataRef: "oper-state:clab-srv6-srsim-core5:e1-1-c4-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "link_id:core1:e1-1-c3-1:core5:e1-1-c4-1":
-    dataRef: "core1:e1-1-c3-1:out"
+  "link_id:clab-srv6-srsim-core1:e1-1-c3-1:clab-srv6-srsim-core5:e1-1-c4-1":
+    dataRef: "clab-srv6-srsim-core1:e1-1-c3-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core1:e1-1-c3-1:core5:e1-1-c4-1:label":
-    dataRef: "core1:e1-1-c3-1:out"
+  "link_id:clab-srv6-srsim-core1:e1-1-c3-1:clab-srv6-srsim-core5:e1-1-c4-1:label":
+    dataRef: "clab-srv6-srsim-core1:e1-1-c3-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "link_id:core5:e1-1-c4-1:core1:e1-1-c3-1":
-    dataRef: "core5:e1-1-c4-1:out"
+  "link_id:clab-srv6-srsim-core5:e1-1-c4-1:clab-srv6-srsim-core1:e1-1-c3-1":
+    dataRef: "clab-srv6-srsim-core5:e1-1-c4-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core5:e1-1-c4-1:core1:e1-1-c3-1:label":
-    dataRef: "core5:e1-1-c4-1:out"
+  "link_id:clab-srv6-srsim-core5:e1-1-c4-1:clab-srv6-srsim-core1:e1-1-c3-1:label":
+    dataRef: "clab-srv6-srsim-core5:e1-1-c4-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "core2:e1-1-c2-1":
-    dataRef: "oper-state:core2:e1-1-c2-1"
+  "clab-srv6-srsim-core2:e1-1-c2-1":
+    dataRef: "oper-state:clab-srv6-srsim-core2:e1-1-c2-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "core3:e1-1-c2-1":
-    dataRef: "oper-state:core3:e1-1-c2-1"
+  "clab-srv6-srsim-core3:e1-1-c2-1":
+    dataRef: "oper-state:clab-srv6-srsim-core3:e1-1-c2-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "link_id:core2:e1-1-c2-1:core3:e1-1-c2-1":
-    dataRef: "core2:e1-1-c2-1:out"
+  "link_id:clab-srv6-srsim-core2:e1-1-c2-1:clab-srv6-srsim-core3:e1-1-c2-1":
+    dataRef: "clab-srv6-srsim-core2:e1-1-c2-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core2:e1-1-c2-1:core3:e1-1-c2-1:label":
-    dataRef: "core2:e1-1-c2-1:out"
+  "link_id:clab-srv6-srsim-core2:e1-1-c2-1:clab-srv6-srsim-core3:e1-1-c2-1:label":
+    dataRef: "clab-srv6-srsim-core2:e1-1-c2-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "link_id:core3:e1-1-c2-1:core2:e1-1-c2-1":
-    dataRef: "core3:e1-1-c2-1:out"
+  "link_id:clab-srv6-srsim-core3:e1-1-c2-1:clab-srv6-srsim-core2:e1-1-c2-1":
+    dataRef: "clab-srv6-srsim-core3:e1-1-c2-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core3:e1-1-c2-1:core2:e1-1-c2-1:label":
-    dataRef: "core3:e1-1-c2-1:out"
+  "link_id:clab-srv6-srsim-core3:e1-1-c2-1:clab-srv6-srsim-core2:e1-1-c2-1:label":
+    dataRef: "clab-srv6-srsim-core3:e1-1-c2-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "core2:e1-1-c3-1":
-    dataRef: "oper-state:core2:e1-1-c3-1"
+  "clab-srv6-srsim-core2:e1-1-c3-1":
+    dataRef: "oper-state:clab-srv6-srsim-core2:e1-1-c3-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "core6:e1-1-c4-1":
-    dataRef: "oper-state:core6:e1-1-c4-1"
+  "clab-srv6-srsim-core6:e1-1-c4-1":
+    dataRef: "oper-state:clab-srv6-srsim-core6:e1-1-c4-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "link_id:core2:e1-1-c3-1:core6:e1-1-c4-1":
-    dataRef: "core2:e1-1-c3-1:out"
+  "link_id:clab-srv6-srsim-core2:e1-1-c3-1:clab-srv6-srsim-core6:e1-1-c4-1":
+    dataRef: "clab-srv6-srsim-core2:e1-1-c3-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core2:e1-1-c3-1:core6:e1-1-c4-1:label":
-    dataRef: "core2:e1-1-c3-1:out"
+  "link_id:clab-srv6-srsim-core2:e1-1-c3-1:clab-srv6-srsim-core6:e1-1-c4-1:label":
+    dataRef: "clab-srv6-srsim-core2:e1-1-c3-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "link_id:core6:e1-1-c4-1:core2:e1-1-c3-1":
-    dataRef: "core6:e1-1-c4-1:out"
+  "link_id:clab-srv6-srsim-core6:e1-1-c4-1:clab-srv6-srsim-core2:e1-1-c3-1":
+    dataRef: "clab-srv6-srsim-core6:e1-1-c4-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core6:e1-1-c4-1:core2:e1-1-c3-1:label":
-    dataRef: "core6:e1-1-c4-1:out"
+  "link_id:clab-srv6-srsim-core6:e1-1-c4-1:clab-srv6-srsim-core2:e1-1-c3-1:label":
+    dataRef: "clab-srv6-srsim-core6:e1-1-c4-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "core5:e1-1-c3-1":
-    dataRef: "oper-state:core5:e1-1-c3-1"
+  "clab-srv6-srsim-core5:e1-1-c3-1":
+    dataRef: "oper-state:clab-srv6-srsim-core5:e1-1-c3-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "core3:e1-1-c5-1":
-    dataRef: "oper-state:core3:e1-1-c5-1"
+  "clab-srv6-srsim-core3:e1-1-c5-1":
+    dataRef: "oper-state:clab-srv6-srsim-core3:e1-1-c5-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "link_id:core5:e1-1-c3-1:core3:e1-1-c5-1":
-    dataRef: "core5:e1-1-c3-1:out"
+  "link_id:clab-srv6-srsim-core5:e1-1-c3-1:clab-srv6-srsim-core3:e1-1-c5-1":
+    dataRef: "clab-srv6-srsim-core5:e1-1-c3-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core5:e1-1-c3-1:core3:e1-1-c5-1:label":
-    dataRef: "core5:e1-1-c3-1:out"
+  "link_id:clab-srv6-srsim-core5:e1-1-c3-1:clab-srv6-srsim-core3:e1-1-c5-1:label":
+    dataRef: "clab-srv6-srsim-core5:e1-1-c3-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "link_id:core3:e1-1-c5-1:core5:e1-1-c3-1":
-    dataRef: "core3:e1-1-c5-1:out"
+  "link_id:clab-srv6-srsim-core3:e1-1-c5-1:clab-srv6-srsim-core5:e1-1-c3-1":
+    dataRef: "clab-srv6-srsim-core3:e1-1-c5-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core3:e1-1-c5-1:core5:e1-1-c3-1:label":
-    dataRef: "core3:e1-1-c5-1:out"
+  "link_id:clab-srv6-srsim-core3:e1-1-c5-1:clab-srv6-srsim-core5:e1-1-c3-1:label":
+    dataRef: "clab-srv6-srsim-core3:e1-1-c5-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "core5:e1-1-c5-1":
-    dataRef: "oper-state:core5:e1-1-c5-1"
+  "clab-srv6-srsim-core5:e1-1-c5-1":
+    dataRef: "oper-state:clab-srv6-srsim-core5:e1-1-c5-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "core6:e1-1-c5-1":
-    dataRef: "oper-state:core6:e1-1-c5-1"
+  "clab-srv6-srsim-core6:e1-1-c5-1":
+    dataRef: "oper-state:clab-srv6-srsim-core6:e1-1-c5-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "link_id:core5:e1-1-c5-1:core6:e1-1-c5-1":
-    dataRef: "core5:e1-1-c5-1:out"
+  "link_id:clab-srv6-srsim-core5:e1-1-c5-1:clab-srv6-srsim-core6:e1-1-c5-1":
+    dataRef: "clab-srv6-srsim-core5:e1-1-c5-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core5:e1-1-c5-1:core6:e1-1-c5-1:label":
-    dataRef: "core5:e1-1-c5-1:out"
+  "link_id:clab-srv6-srsim-core5:e1-1-c5-1:clab-srv6-srsim-core6:e1-1-c5-1:label":
+    dataRef: "clab-srv6-srsim-core5:e1-1-c5-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "link_id:core6:e1-1-c5-1:core5:e1-1-c5-1":
-    dataRef: "core6:e1-1-c5-1:out"
+  "link_id:clab-srv6-srsim-core6:e1-1-c5-1:clab-srv6-srsim-core5:e1-1-c5-1":
+    dataRef: "clab-srv6-srsim-core6:e1-1-c5-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core6:e1-1-c5-1:core5:e1-1-c5-1:label":
-    dataRef: "core6:e1-1-c5-1:out"
+  "link_id:clab-srv6-srsim-core6:e1-1-c5-1:clab-srv6-srsim-core5:e1-1-c5-1:label":
+    dataRef: "clab-srv6-srsim-core6:e1-1-c5-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "core6:e1-1-c3-1":
-    dataRef: "oper-state:core6:e1-1-c3-1"
+  "clab-srv6-srsim-core6:e1-1-c3-1":
+    dataRef: "oper-state:clab-srv6-srsim-core6:e1-1-c3-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "core3:e1-1-c6-1":
-    dataRef: "oper-state:core3:e1-1-c6-1"
+  "clab-srv6-srsim-core3:e1-1-c6-1":
+    dataRef: "oper-state:clab-srv6-srsim-core3:e1-1-c6-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "link_id:core6:e1-1-c3-1:core3:e1-1-c6-1":
-    dataRef: "core6:e1-1-c3-1:out"
+  "link_id:clab-srv6-srsim-core6:e1-1-c3-1:clab-srv6-srsim-core3:e1-1-c6-1":
+    dataRef: "clab-srv6-srsim-core6:e1-1-c3-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core6:e1-1-c3-1:core3:e1-1-c6-1:label":
-    dataRef: "core6:e1-1-c3-1:out"
+  "link_id:clab-srv6-srsim-core6:e1-1-c3-1:clab-srv6-srsim-core3:e1-1-c6-1:label":
+    dataRef: "clab-srv6-srsim-core6:e1-1-c3-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "link_id:core3:e1-1-c6-1:core6:e1-1-c3-1":
-    dataRef: "core3:e1-1-c6-1:out"
+  "link_id:clab-srv6-srsim-core3:e1-1-c6-1:clab-srv6-srsim-core6:e1-1-c3-1":
+    dataRef: "clab-srv6-srsim-core3:e1-1-c6-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core3:e1-1-c6-1:core6:e1-1-c3-1:label":
-    dataRef: "core3:e1-1-c6-1:out"
+  "link_id:clab-srv6-srsim-core3:e1-1-c6-1:clab-srv6-srsim-core6:e1-1-c3-1:label":
+    dataRef: "clab-srv6-srsim-core3:e1-1-c6-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "client-5:eth1":
-    dataRef: "oper-state:client-5:eth1"
+  "clab-srv6-srsim-client-5:eth1":
+    dataRef: "oper-state:clab-srv6-srsim-client-5:eth1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "ce5:e1-1-c5-1":
-    dataRef: "oper-state:ce5:e1-1-c5-1"
+  "clab-srv6-srsim-ce5:e1-1-c5-1":
+    dataRef: "oper-state:clab-srv6-srsim-ce5:e1-1-c5-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "link_id:client-5:eth1:ce5:e1-1-c5-1":
-    dataRef: "client-5:eth1:out"
+  "link_id:clab-srv6-srsim-client-5:eth1:clab-srv6-srsim-ce5:e1-1-c5-1":
+    dataRef: "clab-srv6-srsim-client-5:eth1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:client-5:eth1:ce5:e1-1-c5-1:label":
-    dataRef: "client-5:eth1:out"
+  "link_id:clab-srv6-srsim-client-5:eth1:clab-srv6-srsim-ce5:e1-1-c5-1:label":
+    dataRef: "clab-srv6-srsim-client-5:eth1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "link_id:ce5:e1-1-c5-1:client-5:eth1":
-    dataRef: "ce5:e1-1-c5-1:out"
+  "link_id:clab-srv6-srsim-ce5:e1-1-c5-1:clab-srv6-srsim-client-5:eth1":
+    dataRef: "clab-srv6-srsim-ce5:e1-1-c5-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:ce5:e1-1-c5-1:client-5:eth1:label":
-    dataRef: "ce5:e1-1-c5-1:out"
+  "link_id:clab-srv6-srsim-ce5:e1-1-c5-1:clab-srv6-srsim-client-5:eth1:label":
+    dataRef: "clab-srv6-srsim-ce5:e1-1-c5-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
   "client-6:eth1":
-    dataRef: "oper-state:client-6:eth1"
+    dataRef: "oper-state:clab-srv6-srsim-client-6:eth1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "ce6:e1-1-c5-1":
-    dataRef: "oper-state:ce6:e1-1-c5-1"
+  "clab-srv6-srsim-ce6:e1-1-c5-1":
+    dataRef: "oper-state:clab-srv6-srsim-ce6:e1-1-c5-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "link_id:client-6:eth1:ce6:e1-1-c5-1":
-    dataRef: "client-6:eth1:out"
+  "link_id:clab-srv6-srsim-client-6:eth1:clab-srv6-srsim-ce6:e1-1-c5-1":
+    dataRef: "clab-srv6-srsim-client-6:eth1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:client-6:eth1:ce6:e1-1-c5-1:label":
-    dataRef: "client-6:eth1:out"
+  "link_id:clab-srv6-srsim-client-6:eth1:clab-srv6-srsim-ce6:e1-1-c5-1:label":
+    dataRef: "clab-srv6-srsim-client-6:eth1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "link_id:ce6:e1-1-c5-1:client-6:eth1":
-    dataRef: "ce6:e1-1-c5-1:out"
+  "link_id:clab-srv6-srsim-ce6:e1-1-c5-1:clab-srv6-srsim-client-6:eth1":
+    dataRef: "clab-srv6-srsim-ce6:e1-1-c5-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:ce6:e1-1-c5-1:client-6:eth1:label":
-    dataRef: "ce6:e1-1-c5-1:out"
+  "link_id:clab-srv6-srsim-ce6:e1-1-c5-1:clab-srv6-srsim-client-6:eth1:label":
+    dataRef: "clab-srv6-srsim-ce6:e1-1-c5-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "core5:e1-1-c6-1":
-    dataRef: "oper-state:core5:e1-1-c6-1"
+  "clab-srv6-srsim-core5:e1-1-c6-1":
+    dataRef: "oper-state:clab-srv6-srsim-core5:e1-1-c6-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "ce5:e1-1-c1-1":
-    dataRef: "oper-state:ce5:e1-1-c1-1"
+  "clab-srv6-srsim-ce5:e1-1-c1-1":
+    dataRef: "oper-state:clab-srv6-srsim-ce5:e1-1-c1-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "link_id:core5:e1-1-c6-1:ce5:e1-1-c1-1":
-    dataRef: "core5:e1-1-c6-1:out"
+  "link_id:clab-srv6-srsim-core5:e1-1-c6-1:clab-srv6-srsim-ce5:e1-1-c1-1":
+    dataRef: "clab-srv6-srsim-core5:e1-1-c6-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core5:e1-1-c6-1:ce5:e1-1-c1-1:label":
-    dataRef: "core5:e1-1-c6-1:out"
+  "link_id:clab-srv6-srsim-core5:e1-1-c6-1:clab-srv6-srsim-ce5:e1-1-c1-1:label":
+    dataRef: "clab-srv6-srsim-core5:e1-1-c6-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "link_id:ce5:e1-1-c1-1:core5:e1-1-c6-1":
-    dataRef: "ce5:e1-1-c1-1:out"
+  "link_id:clab-srv6-srsim-ce5:e1-1-c1-1:clab-srv6-srsim-core5:e1-1-c6-1":
+    dataRef: "clab-srv6-srsim-ce5:e1-1-c1-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:ce5:e1-1-c1-1:core5:e1-1-c6-1:label":
-    dataRef: "ce5:e1-1-c1-1:out"
+  "link_id:clab-srv6-srsim-ce5:e1-1-c1-1:clab-srv6-srsim-core5:e1-1-c6-1:label":
+    dataRef: "clab-srv6-srsim-ce5:e1-1-c1-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "core6:e1-1-c6-1":
-    dataRef: "oper-state:core6:e1-1-c6-1"
+  "clab-srv6-srsim-core6:e1-1-c6-1":
+    dataRef: "oper-state:clab-srv6-srsim-core6:e1-1-c6-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "ce5:e1-1-c2-1":
-    dataRef: "oper-state:ce5:e1-1-c2-1"
+  "clab-srv6-srsim-ce5:e1-1-c2-1":
+    dataRef: "oper-state:clab-srv6-srsim-ce5:e1-1-c2-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "link_id:core6:e1-1-c6-1:ce5:e1-1-c2-1":
-    dataRef: "core6:e1-1-c6-1:out"
+  "link_id:clab-srv6-srsim-core6:e1-1-c6-1:clab-srv6-srsim-ce5:e1-1-c2-1":
+    dataRef: "clab-srv6-srsim-core6:e1-1-c6-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core6:e1-1-c6-1:ce5:e1-1-c2-1:label":
-    dataRef: "core6:e1-1-c6-1:out"
+  "link_id:clab-srv6-srsim-core6:e1-1-c6-1:clab-srv6-srsim-ce5:e1-1-c2-1:label":
+    dataRef: "clab-srv6-srsim-core6:e1-1-c6-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "link_id:ce5:e1-1-c2-1:core6:e1-1-c6-1":
-    dataRef: "ce5:e1-1-c2-1:out"
+  "link_id:clab-srv6-srsim-ce5:e1-1-c2-1:clab-srv6-srsim-core6:e1-1-c6-1":
+    dataRef: "clab-srv6-srsim-ce5:e1-1-c2-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:ce5:e1-1-c2-1:core6:e1-1-c6-1:label":
-    dataRef: "ce5:e1-1-c2-1:out"
+  "link_id:clab-srv6-srsim-ce5:e1-1-c2-1:clab-srv6-srsim-core6:e1-1-c6-1:label":
+    dataRef: "clab-srv6-srsim-ce5:e1-1-c2-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "core1:e1-1-c6-1":
-    dataRef: "oper-state:core1:e1-1-c6-1"
+  "clab-srv6-srsim-core1:e1-1-c6-1":
+    dataRef: "oper-state:clab-srv6-srsim-core1:e1-1-c6-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "ce6:e1-1-c1-1":
-    dataRef: "oper-state:ce6:e1-1-c1-1"
+  "clab-srv6-srsim-ce6:e1-1-c1-1":
+    dataRef: "oper-state:clab-srv6-srsim-ce6:e1-1-c1-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "link_id:core1:e1-1-c6-1:ce6:e1-1-c1-1":
-    dataRef: "core1:e1-1-c6-1:out"
+  "link_id:clab-srv6-srsim-core1:e1-1-c6-1:clab-srv6-srsim-ce6:e1-1-c1-1":
+    dataRef: "clab-srv6-srsim-core1:e1-1-c6-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core1:e1-1-c6-1:ce6:e1-1-c1-1:label":
-    dataRef: "core1:e1-1-c6-1:out"
+  "link_id:clab-srv6-srsim-core1:e1-1-c6-1:clab-srv6-srsim-ce6:e1-1-c1-1:label":
+    dataRef: "clab-srv6-srsim-core1:e1-1-c6-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "link_id:ce6:e1-1-c1-1:core1:e1-1-c6-1":
-    dataRef: "ce6:e1-1-c1-1:out"
+  "link_id:clab-srv6-srsim-ce6:e1-1-c1-1:clab-srv6-srsim-core1:e1-1-c6-1":
+    dataRef: "clab-srv6-srsim-ce6:e1-1-c1-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:ce6:e1-1-c1-1:core1:e1-1-c6-1:label":
-    dataRef: "ce6:e1-1-c1-1:out"
+  "link_id:clab-srv6-srsim-ce6:e1-1-c1-1:clab-srv6-srsim-core1:e1-1-c6-1:label":
+    dataRef: "clab-srv6-srsim-ce6:e1-1-c1-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "core2:e1-1-c6-1":
-    dataRef: "oper-state:core2:e1-1-c6-1"
+  "clab-srv6-srsim-core2:e1-1-c6-1":
+    dataRef: "oper-state:clab-srv6-srsim-core2:e1-1-c6-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "ce6:e1-1-c2-1":
-    dataRef: "oper-state:ce6:e1-1-c2-1"
+  "clab-srv6-srsim-ce6:e1-1-c2-1":
+    dataRef: "oper-state:clab-srv6-srsim-ce6:e1-1-c2-1"
     fillColor:
       thresholds: *thresholds-operstate
     tags: ["hide-rates"]
-  "link_id:core2:e1-1-c6-1:ce6:e1-1-c2-1":
-    dataRef: "core2:e1-1-c6-1:out"
+  "link_id:clab-srv6-srsim-core2:e1-1-c6-1:clab-srv6-srsim-ce6:e1-1-c2-1":
+    dataRef: "clab-srv6-srsim-core2:e1-1-c6-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:core2:e1-1-c6-1:ce6:e1-1-c2-1:label":
-    dataRef: "core2:e1-1-c6-1:out"
+  "link_id:clab-srv6-srsim-core2:e1-1-c6-1:clab-srv6-srsim-ce6:e1-1-c2-1:label":
+    dataRef: "clab-srv6-srsim-core2:e1-1-c6-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
-  "link_id:ce6:e1-1-c2-1:core2:e1-1-c6-1":
-    dataRef: "ce6:e1-1-c2-1:out"
+  "link_id:clab-srv6-srsim-ce6:e1-1-c2-1:clab-srv6-srsim-core2:e1-1-c6-1":
+    dataRef: "clab-srv6-srsim-ce6:e1-1-c2-1:out"
     strokeColor:
       thresholds: *thresholds-traffic
     tags: ["hide-rates"]
-  "link_id:ce6:e1-1-c2-1:core2:e1-1-c6-1:label":
-    dataRef: "ce6:e1-1-c2-1:out"
+  "link_id:clab-srv6-srsim-ce6:e1-1-c2-1:clab-srv6-srsim-core2:e1-1-c6-1:label":
+    dataRef: "clab-srv6-srsim-ce6:e1-1-c2-1:out"
     label: *label-config
     labelColor:
       thresholds: *thresholds-rate-label
